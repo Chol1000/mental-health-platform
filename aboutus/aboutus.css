@@ -1,0 +1,256 @@
+/* RESET STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Gowun Batang', serif;  /* Use Gowun Batang throughout */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #FFFFFF;  /* White background */
+  color: #000000;             /* Black text */
+}
+
+/* HEADER */
+header {
+  width: 100%;
+}
+
+/* TOP WHITE BAR */
+.top-bar {
+  background: #FFFFFF;
+  height: 99px;        /* As per Figma */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.top-bar .logo img {
+  height: 84px;
+  /* Adjust margin or padding if you need fine-tuning for alignment */
+}
+
+/* SEARCH BUTTON ON THE TOP BAR */
+.search-button {
+  background: #086D2B;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* GREEN NAV BAR (MAIN NAV) */
+.main-nav {
+  background: #086D2B;
+  padding: 0.5rem 0;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* 'ABOUT US' LINK IN WHITE OR YELLOW */
+.main-nav ul li a.active {
+  color: #ffffff; /* or #FFF000 for a yellow highlight */
+}
+
+/* MAIN CONTENT */
+main {
+  flex: 1;
+}
+
+/* ABOUT SECTION */
+.about-section {
+  width: 80%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.about-section h2 {
+  font-size: 28px;
+  margin: 30px 0 15px;
+  font-weight: 700;
+}
+
+.about-section p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 10px auto;
+  max-width: 1000px; /* Limits text width for better reading */
+}
+
+/* ORDERED LISTS */
+.about-section ol {
+  display: inline-block;
+  text-align: left;
+  margin: 10px auto 20px;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 1000px; /* Keeps the list at a comfortable width */
+}
+
+.about-section ol li {
+  margin-bottom: 8px;
+}
+
+/* 'GET STARTED' BUTTON */
+.cta-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 30px;
+  background: #086D2B;
+  color: #FFFFFF;
+  font-size: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  background: #002365;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-bottom: 20px;
+}
+
+.footer-links div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links span {
+  font-size: 18px;
+}
+
+.footer-links img {
+  width: 20px;
+  height: 20px;
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 80%;
+  margin: 10px auto;
+}
+
+footer p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* 1) Medium-to-large tablets (~ <992px) */
+@media (max-width: 992px) {
+  .main-nav ul {
+    gap: 30px;
+  }
+  .about-section h1 {
+    font-size: 28px;
+  }
+  .about-section h2 {
+    font-size: 24px;
+  }
+  .about-section p,
+  .about-section ol {
+    font-size: 18px;
+  }
+  .cta-button {
+    font-size: 16px;
+  }
+}
+
+/* 2) Smaller tablets & large phones (~ <768px) */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+  .search-button {
+    margin: 10px 0;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* 3) Phones (~ <480px) */
+@media (max-width: 480px) {
+  .search-button {
+    font-size: 14px;
+  }
+  .about-section {
+    width: 90%;
+    padding: 30px 0;
+  }
+  .about-section h1 {
+    font-size: 24px;
+  }
+  .about-section h2 {
+    font-size: 20px;
+  }
+  .about-section p,
+  .about-section ol {
+    font-size: 16px;
+  }
+  .cta-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .footer-links span {
+    font-size: 16px;
+  }
+}
