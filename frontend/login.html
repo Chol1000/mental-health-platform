@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up/In - Mental Health Platform</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Link to your external CSS -->
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+
+<!-- ===== TOP WHITE BAR (LOGO + SEARCH) ===== -->
+<header class="top-bar">
+  <div class="logo">
+    <!-- Replace with your actual logo path/file -->
+    <img src="logo.jpg" alt="MHP Logo" />
+  </div>
+  <button class="search-btn">SEARCH</button>
+</header>
+
+<!-- ===== GREEN NAV BAR ===== -->
+<nav class="main-nav">
+  <ul>
+    <li><a href="../home/home.html">HOME</a></li>
+    <li><a href="../about us/aboutus.html">ABOUT US</a></li>
+    <li><a href="../community/community.html">COMMUNITY</a></li>
+    <li><a href="../resources/resources.html">RESOURCES</a></li>
+    <li><a href="../contacts/contacts.html">CONTACTS</a></li>
+    <!-- SIGN IN/UP in yellow to indicate active link -->
+    <li><a href="../signup/signup.html" class="active">SIGN IN/UP</a></li>
+  </ul>
+</nav>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="login-content">
+  <!-- Page Header -->
+  <h1>SIGN UP/IN</h1>
+
+  <!-- Intro Section -->
+  <section class="intro-section">
+    <h2>Sign Up / Sign In – Join Our Community</h2>
+    <p>
+      Creating an account gives you access to exclusive features designed 
+      to support your mental well-being. Whether you’re new here or returning, 
+      getting started is simple!
+    </p>
+  </section>
+
+  <!-- Why Sign Up -->
+  <section class="why-section">
+    <h2>Why Sign Up?</h2>
+    <ol>
+      <li>Access Personalized Self-Care Activities tailored to your needs.</li>
+      <li>Engage in Community Discussions and connect with others.</li>
+      <li>Explore exclusive mental health resources, videos, and tools.</li>
+      <li>Receive updates and helpful content directly from our platform.</li>
+    </ol>
+  </section>
+
+  <!-- LOGIN BOX -->
+  <section class="login-box">
+    <h2>Log In</h2>
+
+    <form method="POST" action="http://127.0.0.1:5000/login">
+      <!-- Email Field -->
+      <div class="form-field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="E-mail" required />
+      </div>
+
+      <!-- Password Field -->
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Password" required />
+      </div>
+
+      <!-- Remember Me & Forgot Password Row -->
+      <div class="extras-row">
+        <label class="remember-me">
+          <input type="checkbox" name="remember_me" />
+          Remember me
+        </label>
+        <a href="#" class="forgot">Forgot password?</a>
+      </div>
+
+      <!-- Log In Button -->
+      <button class="login-btn" type="submit">Log In</button>
+
+      <p class="not-member">
+        Not a member? <a href="../signup/signup.html">Sign Up</a>
+      </p>
+    </form>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-links">
+    <div class="footer-item">
+      <span>Stay Connected</span>
+      <!-- Replace with GitHub icon path -->
+      <img src="kisspng-scalable-vector-graphics-github-...png" alt="GitHub" />
+    </div>
+    <div class="footer-item">
+      <span>Q &amp; A</span>
+      <!-- Replace with Q & A icon path -->
+      <img src="471664-removebg-preview.png" alt="Q & A" />
+    </div>
+    <div class="footer-item">
+      <span>Contact Us</span>
+      <!-- Replace with contact icon path -->
+      <img src="fc27fb81e77cc56ba4ed981d7801ceb9-removebg-preview.png" alt="Contact" />
+    </div>
+  </div>
+  <hr/>
+  <p>Copyright © 2025. All rights reserved</p>
+  <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>
