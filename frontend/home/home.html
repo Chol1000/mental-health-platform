@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Mental Health Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../login/header.css" />
+  <link rel="stylesheet" href="../login/footer.css" />
+  <link rel="stylesheet" href="home.css">
+  <style>
+    .highlight {
+      background-color: #FFD700;
+      font-weight: bold;
+    }
+    .desktop-search, .mobile-search-container {
+      position: relative;
+    }
+    .clear-search {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #999;
+    }
+    /* Active link styling */
+    .main-nav .active,
+    .mobile-nav .active {
+      color: #FFD700;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<!-- TOP BAR (Logo & Search) -->
+<header class="top-bar">
+  <div class="logo">
+    <img src="../images/logo.png" alt="MHP Logo">
+  </div>
+  <!-- Desktop Search -->
+  <div class="desktop-search">
+    <input type="text" placeholder="Search website..." id="desktop-search-input">
+    <span class="clear-search">×</span>
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</header>
+<!-- DESKTOP NAV BAR -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <ul>
+      <li><a href="#" class="active">HOME</a></li>
+      <li><a href="../aboutus/aboutus.html">ABOUT US</a></li>
+      <li><a href="../community/community.html">COMMUNITY</a></li>
+      <li><a href="../resources/resources.html">RESOURCES</a></li>
+      <li><a href="../contacts/contacts.html">CONTACTS</a></li>
+    </ul>
+    <a href="../signup/signup.html" class="user-info">
+      <span class="user-name">Sign In/Up</span>
+    </a>
+  </div>
+</nav>
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <!-- Mobile Search -->
+    <div class="mobile-search-container">
+      <input type="text" placeholder="Search ..." id="mobile-search-input">
+      <span class="clear-search">×</span>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="#" class="active">HOME</a></li>
+        <li><a href="../aboutus/aboutus.html">ABOUT US</a></li>
+        <li><a href="../community/community.html">COMMUNITY</a></li>
+        <li><a href="../resources/resources.html">RESOURCES</a></li>
+        <li><a href="../contacts/contacts.html">CONTACTS</a></li>
+      </ul>
+    </nav>
+    <a href="../signup/signup.html" class="mobile-user-info">
+      <span class="mobile-user-name">Sign In/Up</span>
+    </a>
+  </div>
+</div>
+<!-- MAIN CONTENT -->
+<main class="home-content">
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <!-- Left: Intro + Key Features -->
+    <div class="hero-text">
+      <h2>Welcome to Mental Health Platform</h2>
+      <h3>Your Mental Well-being Matters – Start Your Journey Today!</h3>
+      <p>
+        Take control of your emotional well-being with personalized
+        tools, expert resources, and a supportive community.
+      </p>
+
+
+      <!-- Key Features -->
+      <h5>Key Features</h5>
+      <ul>
+        <li><strong>Mood Tracker</strong> – Log your daily feelings and track emotional trends.</li>
+        <li><strong>Personalized Activities</strong> – AI-powered recommendations based on your mood.</li>
+        <li><strong>Community Support</strong> – Connect with others facing similar experiences.</li>
+        <li><strong>Mental Health Resources</strong> – Articles, blogs, and expert insights to guide you.</li>
+      </ul>
+    </div>
+
+
+    <!-- Right: CTA -->
+    <div class="cta-box">
+      <p>Join Us Today!<br/>Take the first step towards a healthier mind</p>
+      <a href="../signup/signup.html" class="get-started-btn">Get Started</a>
+    </div>
+  </section>
+
+
+  <!-- OUR TEAM -->
+  <section class="team">
+    <h2>OUR TEAM</h2>
+    <div class="team-grid">
+      <!-- Team member 1 -->
+      <div class="team-card">
+        <div class="team-photo" style="background-image: url('../images/Mahad.jpg')"></div>
+        <h3>Kakooza Mahad</h3>
+        <p>User Experience Design, Application Logic Development</p>
+      </div>
+
+
+      <!-- Team member 2 -->
+      <div class="team-card">
+        <div class="team-photo" style="background-image: url('../images/Chan.jpg')"></div>
+        <h3>Abraham Chan Deng Garang</h3>
+        <p>Research and Documentation, UI and Feedback analysis</p>
+      </div>
+
+
+      <!-- Team member 3 -->
+      <div class="team-card">
+        <div class="team-photo" style="background-image: url('../images/Mika.jpg')"></div>
+        <h3>Rurangwa Mika</h3>
+        <p>UI/UX designing, User testing</p>
+      </div>
+
+
+      <!-- Team member 4 -->
+      <div class="team-card">
+        <div class="team-photo" style="background-image: url('../images/chol.jpg')"></div>
+        <h3>Chol Atem Giet Monykuch</h3>
+        <p>Backend Implementation, Database Management</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- LEARN MORE SECTION -->
+  <section class="learn-more">
+    <p>Need more information?</p>
+    <a href="../aboutus/aboutus.html" class="learn-more-btn">Learn More</a>
+  </section>
+</main>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <div class="footer-item">
+      <span>Stay Connected</span>
+      <img src="../images/github-icon (1).png" alt="GitHub">
+    </div>
+    <div class="footer-item">
+      <span>Q &amp; A</span>
+      <img src="../images/qa-icon.png" alt="Q & A">
+    </div>
+    <div class="footer-item">
+      <span>Contact Us</span>
+      <img src="../images/contact-icon.png" alt="Contact">
+    </div>
+  </div>
+  <hr>
+  <p>Copyright © 2025. All rights reserved</p>
+  <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // ======================
+  // MOBILE MENU TOGGLE
+  // ======================
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const body = document.body;
+
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      body.classList.toggle('no-scroll');
+
+
+      // Animate hamburger lines
+      const lines = this.querySelectorAll('.line');
+      if (this.classList.contains('active')) {
+        lines[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+        lines[1].style.opacity = '0';
+        lines[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+      } else {
+        lines[0].style.transform = 'rotate(0) translate(0)';
+        lines[1].style.opacity = '1';
+        lines[2].style.transform = 'rotate(0) translate(0)';
+      }
+    });
+
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (mobileMenu.classList.contains('active') &&
+          !e.target.closest('.mobile-menu') &&
+          !e.target.closest('.hamburger')) {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        body.classList.remove('no-scroll');
+       
+        // Reset hamburger lines
+        const lines = hamburger.querySelectorAll('.line');
+        lines[0].style.transform = 'rotate(0) translate(0)';
+        lines[1].style.opacity = '1';
+        lines[2].style.transform = 'rotate(0) translate(0)';
+      }
+    });
+
+
+    // Prevent clicks inside the mobile menu from closing it
+    mobileMenu.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  }
+
+
+  // ======================
+  // SEARCH FUNCTIONALITY
+  // ======================
+  // Desktop Search
+  const desktopSearchInput = document.getElementById('desktop-search-input');
+  const desktopSearchContainer = document.querySelector('.desktop-search');
+ 
+  if (desktopSearchInput && desktopSearchContainer) {
+    const desktopClearSearch = desktopSearchContainer.querySelector('.clear-search');
+   
+    desktopSearchInput.addEventListener('input', function() {
+      desktopClearSearch.style.display = this.value ? 'block' : 'none';
+    });
+   
+    desktopClearSearch.addEventListener('click', function() {
+      desktopSearchInput.value = '';
+      desktopClearSearch.style.display = 'none';
+      desktopSearchInput.focus();
+    });
+  }
+
+
+  // Mobile Search
+  const mobileSearchInput = document.getElementById('mobile-search-input');
+  const mobileSearchContainer = document.querySelector('.mobile-search-container');
+ 
+  if (mobileSearchInput && mobileSearchContainer) {
+    const mobileClearSearch = mobileSearchContainer.querySelector('.clear-search');
+   
+    mobileSearchInput.addEventListener('input', function() {
+      mobileClearSearch.style.display = this.value ? 'block' : 'none';
+    });
+   
+    mobileClearSearch.addEventListener('click', function() {
+      mobileSearchInput.value = '';
+      mobileClearSearch.style.display = 'none';
+      mobileSearchInput.focus();
+    });
+  }
+});
+</script>
+</body>
+</html>
+

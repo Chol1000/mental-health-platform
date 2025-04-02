@@ -1,0 +1,466 @@
+/****************************
+MAIN CONTENT CONTAINER
+*****************************/
+.home-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  flex: 1;
+  text-align: center;
+  padding-top: 20px;
+  animation: fadeIn 0.5s ease-out;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/****************************
+HERO SECTION
+*****************************/
+.hero {
+  display: flex;
+  justify-content: flex-start;  
+  align-items: flex-start;
+  min-height: 500px;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+  background: url('../images/background-image.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.85;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  width: 100%; /* Fill the constrained container */
+}
+
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 35, 101, 0.6);
+  z-index: 0;
+}
+
+
+.hero:hover {
+  opacity: 0.95;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* LEFT COLUMN: Intro + Key Features */
+.hero-text {
+  width: 60%;
+  margin-right: 2rem;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* Title, SubTitle, Paragraphs */
+.hero-text h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+
+.hero-text h5 {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+  animation: slideInLeft 0.7s ease-out;
+}
+
+
+.hero-text h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.9s ease-out;
+}
+
+
+/* Key Features: */
+.hero-text ul {
+  list-style: none;
+  padding-left: 0;  
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+
+.hero-text ul li {
+  color: #FFFFFF;
+  line-height: 1.4;
+  margin-bottom: 0.8rem;
+  white-space: nowrap;      
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  padding-left: 25px;
+  transition: all 0.3s ease;
+}
+
+
+.hero-text ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #FFD700;
+  font-weight: bold;
+}
+
+
+.hero-text ul li:hover {
+  transform: translateX(5px);
+  color: #FFD700;
+}
+
+
+/* RIGHT COLUMN: CTA */
+.cta-box {
+  width: 35%;
+  text-align: center;
+  margin-top: 10rem;
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 1s ease-out;
+}
+
+
+.cta-box p {
+  font-size: 16px;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.get-started-btn {
+  background: #086D2B;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.get-started-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+
+.get-started-btn:hover {
+  background: #054d1c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.get-started-btn:active::after {
+  animation: ripple 0.6s ease-out;
+}
+
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(25, 25);
+    opacity: 0;
+  }
+}
+
+
+/****************************
+TEAM SECTION
+*****************************/
+.team {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+
+.team h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+
+.team h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #086D2B;
+}
+
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+
+.team-card {
+  background: #FFFFFF;
+  border-radius: 15px;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 285px;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.team-photo {
+  width: 100%;
+  height: 230px;
+  background-size: cover;
+  background-position: top;
+  border-radius: 15px 15px 0 0;
+  transition: all 0.5s ease;
+}
+
+
+.team-card:hover .team-photo {
+  transform: scale(1.05);
+}
+
+
+.team-card h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0.5rem;
+  color: #086D2B;
+}
+
+
+.team-card p {
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  margin: 0.5rem;
+  color: #333;
+  padding: 0 1rem 1rem;
+}
+
+
+/****************************
+LEARN MORE SECTION
+*****************************/
+.learn-more {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeIn 1.2s ease-out;
+}
+
+
+.learn-more p {
+  font-size: 15px;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.learn-more-btn {
+  background: #086D2B;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.learn-more-btn:hover {
+  background: #054d1c;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/****************************
+ANIMATIONS
+*****************************/
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/****************************
+RESPONSIVE MEDIA QUERIES
+*****************************/
+
+
+@media (max-width: 768px) {
+  /* Hero columns stack on smaller screens */
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: auto;
+    padding: 1.5rem;
+  }
+ 
+  .hero-text {
+    width: 100%;
+    margin-right: 0;
+  }
+ 
+  .hero-text h5 {
+    margin-top: 2rem;
+  }
+ 
+  .cta-box {
+    width: 100%;
+    margin-top: 2rem;
+    text-align: left;
+  }
+ 
+  .hero-text h2 {
+    font-size: 24px;
+  }
+ 
+  .hero-text h3 {
+    font-size: 18px;
+  }
+ 
+  .hero-text p {
+    font-size: 16px;
+  }
+ 
+  .team-card h3 {
+    font-size: 15px;
+  }
+ 
+  .team-card p {
+    font-size: 13px;
+  }
+ 
+  .learn-more p {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .main-content-container {
+    padding: 0 20px;
+  }
+ 
+  .hero-text {
+    padding: 0;
+  }
+ 
+  .hero-text h2 {
+    font-size: 20px;
+  }
+ 
+  .hero-text h3 {
+    font-size: 16px;
+  }
+ 
+  .hero-text p {
+    font-size: 14px;
+  }
+ 
+  .cta-box p {
+    font-size: 14px;
+  }
+ 
+  .get-started-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+ 
+  .team h2 {
+    font-size: 20px;
+  }
+ 
+  .team-card h3 {
+    font-size: 14px;
+  }
+ 
+  .team-card p {
+    font-size: 12px;
+  }
+ 
+  .learn-more p {
+    font-size: 13px;
+  }
+ 
+  .learn-more-btn {
+    font-size: 14px;
+  }
+}
+
