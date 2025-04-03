@@ -53,12 +53,6 @@ The system follows a **client-server** architecture where the frontend interacts
 
 ---
 
-#### Data Flow Diagram
-
-*(Insert your data flow diagram here)*
-
----
-
 #### Data Flow Explanation
 
 1. **User Interaction**: The user interacts with the web interface (frontend) by logging in, making journal entries, or chatting with the AI.
