@@ -1,0 +1,196 @@
+/* aboutus.css - Updated for Not Logged In (Content Only) */
+
+
+/****************************
+  MAIN CONTENT STYLES
+*****************************/
+.about-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  flex: 1;
+  text-align: center;
+}
+
+
+.about-content h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333; /* Changed from #002365 (blue) */
+}
+
+
+/* SECTION STYLES */
+.intro-section,
+.mission-section,
+.offer-section,
+.why-section {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+
+.intro-section h2,
+.mission-section h2,
+.offer-section h2,
+.why-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #333; /* Changed from #086D2B (green) */
+}
+
+
+.intro-section p,
+.mission-section p,
+.offer-section p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0.5rem auto 1.5rem;
+  max-width: 800px;
+  color: #333;
+}
+
+
+/* LIST STYLES */
+.mission-section ol,
+.offer-section ol,
+.why-section ol {
+  list-style-position: inside;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+
+.mission-section ol li,
+.offer-section ol li,
+.why-section ol li {
+  margin-bottom: 1rem;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+
+.mission-section ol li::before,
+.offer-section ol li::before,
+.why-section ol li::before {
+  content: "•";
+  color: #333; /* Changed from #086D2B (green) */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+
+/* Strong text styling */
+strong {
+  color: #333; /* Changed from #086D2B (green) */
+  font-weight: 600; /* Kept bold but with normal color */
+}
+
+
+/* CTA BUTTON (Keeping original green style) */
+.cta-container {
+  margin: 3rem 0;
+}
+
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #086D2B; /* Kept original green color */
+  color: #FFFFFF;
+  font-size: 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+
+.cta-button:hover {
+  background: #054d1c; /* Kept original darker green hover state */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/****************************
+  MEDIA QUERIES
+*****************************/
+@media (max-width: 768px) {
+  .about-content h1 {
+    font-size: 28px;
+  }
+ 
+  .intro-section h2,
+  .mission-section h2,
+  .offer-section h2,
+  .why-section h2 {
+    font-size: 24px;
+  }
+ 
+  .intro-section p,
+  .mission-section p,
+  .offer-section p,
+  .mission-section ol,
+  .offer-section ol,
+  .why-section ol {
+    font-size: 18px;
+  }
+ 
+  .cta-button {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .about-content {
+    width: 95%;
+  }
+ 
+  .about-content h1 {
+    font-size: 24px;
+  }
+ 
+  .intro-section h2,
+  .mission-section h2,
+  .offer-section h2,
+  .why-section h2 {
+    font-size: 20px;
+  }
+ 
+  .intro-section p,
+  .mission-section p,
+  .offer-section p,
+  .mission-section ol,
+  .offer-section ol,
+  .why-section ol {
+    font-size: 16px;
+  }
+ 
+  .cta-button {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+ 
+  .mission-section ol li,
+  .offer-section ol li,
+  .why-section ol li {
+    padding-left: 1rem;
+  }
+}
+
+
+

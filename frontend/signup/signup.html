@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Mental Health Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../login/header.css">
+  <link rel="stylesheet" href="../login/footer.css">
+  <link rel="stylesheet" href="signup.css">
+  <style>
+    /* Active link styling */
+    .main-nav .active,
+    .mobile-nav .active {
+      color: #FFD700;
+      font-weight: bold;
+    }
+    /* Form error styles */
+    .error-message {
+      color: #ff6b6b;
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+      display: none;
+    }
+    .success-message {
+      color: #4caf50;
+      margin: 1rem 0;
+      font-weight: 600;
+      display: none;
+    }
+    input.error {
+      border-color: #ff6b6b !important;
+    }
+  </style>
+</head>
+<body>
+<!-- TOP BAR (Logo & Search) -->
+<header class="top-bar">
+  <div class="logo">
+    <img src="../images/logo.png" alt="MHP Logo">
+  </div>
+  <!-- Desktop Search -->
+  <div class="desktop-search">
+    <input type="text" placeholder="Search website..." id="desktop-search-input">
+    <span class="clear-search">×</span>
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</header>
+
+
+<!-- DESKTOP NAV BAR -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <ul>
+      <li><a href="../home/home.html">HOME</a></li>
+      <li><a href="../aboutus/aboutus.html">ABOUT US</a></li>
+      <li><a href="../community/community.html">COMMUNITY</a></li>
+      <li><a href="../resources/resources.html">RESOURCES</a></li>
+      <li><a href="../contacts/contacts.html">CONTACTS</a></li>
+    </ul>
+    <a href="../login/login.html" class="user-info">
+      <span class="user-name">Sign In</span>
+    </a>
+  </div>
+</nav>
+
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <!-- Mobile Search -->
+    <div class="mobile-search-container">
+      <input type="text" placeholder="Search ..." id="mobile-search-input">
+      <span class="clear-search">×</span>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="../home/home.html">HOME</a></li>
+        <li><a href="../aboutus/aboutus.html">ABOUT US</a></li>
+        <li><a href="../community/community.html">COMMUNITY</a></li>
+        <li><a href="../resources/resources.html">RESOURCES</a></li>
+        <li><a href="../contacts/contacts.html">CONTACTS</a></li>
+      </ul>
+    </nav>
+    <a href="../login/login.html" class="mobile-user-info">
+      <span class="mobile-user-name">Sign In</span>
+    </a>
+  </div>
+</div>
+
+
+<!-- MAIN CONTENT -->
+<main class="signup-content">
+  <div id="success-message" class="success-message"></div>
+ 
+  <h1>SIGN UP</h1>
+  <section class="intro-section">
+    <h2>Sign Up – Join Our Community</h2>
+    <p>Creating an account gives you access to exclusive features designed to support your mental well-being.</p>
+  </section>
+
+
+  <section class="signup-box">
+    <h2>Create Your Account</h2>
+    <form id="signup-form">
+      <div class="form-field">
+        <input type="text" id="first_name" name="first_name" placeholder="First Name" required>
+        <div id="first_name_error" class="error-message"></div>
+      </div>
+      <div class="form-field">
+        <input type="text" id="last_name" name="last_name" placeholder="Last Name" required>
+        <div id="last_name_error" class="error-message"></div>
+      </div>
+      <div class="form-field">
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <div id="email_error" class="error-message"></div>
+      </div>
+      <div class="form-field">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <div id="password_error" class="error-message"></div>
+      </div>
+
+
+      <p class="already-member">
+        Already a member? <a href="../login/login.html">Log In</a>
+      </p>
+
+
+      <button type="submit" class="register-btn">Register</button>
+    </form>
+  </section>
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <div class="footer-item">
+      <span>Stay Connected</span>
+      <img src="../images/github-icon (1).png" alt="GitHub">
+    </div>
+    <div class="footer-item">
+      <span>Q & A</span>
+      <img src="../images/qa-icon.png" alt="Q & A">
+    </div>
+    <div class="footer-item">
+      <span>Contact Us</span>
+      <img src="../images/contact-icon.png" alt="Contact">
+    </div>
+  </div>
+  <hr>
+  <p>Copyright © 2025. All rights reserved</p>
+  <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+</footer>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle functionality
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+
+
+        const lines = this.querySelectorAll('.line');
+        if (this.classList.contains('active')) {
+          lines[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+          lines[1].style.opacity = '0';
+          lines[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+        } else {
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+
+      document.addEventListener('click', function(e) {
+        if (mobileMenu.classList.contains('active') &&
+            !e.target.closest('.mobile-menu') &&
+            !e.target.closest('.hamburger')) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          body.classList.remove('no-scroll');
+         
+          const lines = hamburger.querySelectorAll('.line');
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+
+      mobileMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+
+
+    // Search functionality
+    const desktopSearchInput = document.getElementById('desktop-search-input');
+    const desktopSearchContainer = document.querySelector('.desktop-search');
+   
+    if (desktopSearchInput && desktopSearchContainer) {
+      const desktopClearSearch = desktopSearchContainer.querySelector('.clear-search');
+     
+      desktopSearchInput.addEventListener('input', function() {
+        desktopClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+     
+      desktopClearSearch.addEventListener('click', function() {
+        desktopSearchInput.value = '';
+        desktopClearSearch.style.display = 'none';
+        desktopSearchInput.focus();
+      });
+    }
+
+
+    const mobileSearchInput = document.getElementById('mobile-search-input');
+    const mobileSearchContainer = document.querySelector('.mobile-search-container');
+   
+    if (mobileSearchInput && mobileSearchContainer) {
+      const mobileClearSearch = mobileSearchContainer.querySelector('.clear-search');
+     
+      mobileSearchInput.addEventListener('input', function() {
+        mobileClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+     
+      mobileClearSearch.addEventListener('click', function() {
+        mobileSearchInput.value = '';
+        mobileClearSearch.style.display = 'none';
+        mobileSearchInput.focus();
+      });
+    }
+
+
+    // Signup form handling
+    document.getElementById("signup-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+     
+      // Reset errors
+      document.querySelectorAll('.error-message').forEach(el => {
+        el.style.display = 'none';
+      });
+      document.querySelectorAll('input').forEach(input => {
+        input.classList.remove('error');
+      });
+
+
+      // Get form data
+      const formData = {
+        first_name: document.getElementById('first_name').value.trim(),
+        last_name: document.getElementById('last_name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        password: document.getElementById('password').value
+      };
+
+
+      // Simple validation
+      let isValid = true;
+      if (!formData.first_name) {
+        showError('first_name', 'First name is required');
+        isValid = false;
+      }
+      if (!formData.last_name) {
+        showError('last_name', 'Last name is required');
+        isValid = false;
+      }
+      if (!formData.email) {
+        showError('email', 'Email is required');
+        isValid = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+        showError('email', 'Invalid email format');
+        isValid = false;
+      }
+      if (!formData.password) {
+        showError('password', 'Password is required');
+        isValid = false;
+      } else if (formData.password.length < 8) {
+        showError('password', 'Password must be at least 8 characters');
+        isValid = false;
+      }
+
+
+      if (!isValid) return;
+
+
+      try {
+        const response = await fetch('https://mental-health-platform-pro4.onrender.com/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData)
+        });
+       
+        const result = await response.json();
+       
+        if (result.success) {
+          // Show success message
+          const successEl = document.getElementById('success-message');
+          successEl.textContent = 'Registration successful! Redirecting...';
+          successEl.style.display = 'block';
+         
+          // Store user data
+          localStorage.setItem('user', JSON.stringify(result.user));
+         
+          // Redirect after 2 seconds
+          setTimeout(() => {
+            window.location.href = '../login/home.html';
+          }, 2000);
+        } else {
+          // Show error message
+          showError('email', result.message);
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        showError('email', 'An error occurred. Please try again.');
+      }
+    });
+
+
+    function showError(fieldId, message) {
+      const field = document.getElementById(fieldId);
+      const errorEl = document.getElementById(`${fieldId}_error`);
+      field.classList.add('error');
+      errorEl.textContent = message;
+      errorEl.style.display = 'block';
+    }
+  });
+</script>
+</body>
+</html>
+
+
+

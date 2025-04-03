@@ -1,0 +1,161 @@
+/* community.css - Only specific styles for community page */
+
+
+/* MAIN CONTENT STYLES */
+.community-content {
+  width: 80%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  flex: 1;
+  text-align: center;
+}
+
+
+/* Headings */
+.community-content h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+
+.community-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+
+/* Paragraphs & Lists */
+.community-content p {
+  margin-bottom: 1rem;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+
+.intro-text {
+  max-width: 800px;
+  margin: 0.5rem auto 2rem;
+}
+
+
+.community-list,
+.why-join-list {
+  list-style-position: inside;
+  text-align: left;          
+  margin: 1rem auto;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+
+.join-intro {
+  margin-top: 1rem;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.join-steps-left {
+  text-align: left;
+  margin: 1rem auto;    
+  max-width: 600px;    
+  line-height: 1.6;
+  font-size: 20px;      
+}
+
+
+.join-now {
+  margin-bottom: 1rem;
+  font-size: 20px;
+}
+
+
+/* Buttons */
+.signup-btn,
+.rules-btn {
+  background: #086D2B;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+
+.cta-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.rules-title {
+  margin-bottom: 1rem;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .community-content h1 {
+    font-size: 28px;
+  }
+ 
+  .community-content h2 {
+    font-size: 24px;
+  }
+ 
+  .community-content p,
+  .community-list,
+  .why-join-list,
+  .join-intro,
+  .join-now,
+  .join-steps-left {
+    font-size: 18px;
+  }
+ 
+  .signup-btn,
+  .rules-btn {
+    font-size: 14px;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .community-content {
+    width: 90%;
+  }
+ 
+  .community-content h1 {
+    font-size: 24px;
+  }
+ 
+  .community-content h2 {
+    font-size: 20px;
+  }
+ 
+  .community-content p,
+  .community-list,
+  .why-join-list,
+  .join-intro,
+  .join-now,
+  .join-steps-left {
+    font-size: 16px;
+  }
+ 
+  .signup-btn,
+  .rules-btn {
+    font-size: 14px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+

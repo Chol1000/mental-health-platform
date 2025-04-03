@@ -1,0 +1,215 @@
+/* signup.css - Only specific styles for signup page */
+
+
+/* MAIN CONTENT STYLES */
+.signup-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  flex: 1;
+  text-align: center;
+}
+
+
+.signup-content h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #002365;
+}
+
+
+/* INTRO SECTION */
+.intro-section {
+  margin-bottom: 3rem;
+}
+
+
+.intro-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #086D2B;
+}
+
+
+.intro-section p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0.5rem auto;
+  max-width: 800px;
+  color: #333;
+}
+
+
+/* SIGNUP BOX */
+.signup-box {
+  background: rgba(0, 35, 101, 0.9);
+  border-radius: 15px;
+  padding: 2.5rem;
+  color: #FFFFFF;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+.signup-box h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+
+/* FORM STYLES */
+#signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+.form-field {
+  width: 100%;
+  text-align: left;
+}
+
+
+.form-field input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Gowun Batang', serif;
+  transition: border-color 0.3s ease;
+}
+
+
+.form-field input:focus {
+  outline: none;
+  border-color: #086D2B;
+}
+
+
+.form-field input::placeholder {
+  color: #999;
+}
+
+
+/* LINK STYLES */
+.already-member {
+  font-size: 16px;
+  margin-top: 1rem;
+}
+
+
+.already-member a {
+  color: #FFD700;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.already-member a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+
+/* BUTTON STYLES */
+.register-btn {
+  background: #FFD700;
+  color: #002365;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+
+.register-btn:hover {
+  background: #FFC000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .signup-content h1 {
+    font-size: 28px;
+  }
+ 
+  .intro-section h2,
+  .signup-box h2 {
+    font-size: 24px;
+  }
+ 
+  .intro-section p {
+    font-size: 18px;
+  }
+ 
+  .signup-box {
+    padding: 2rem;
+  }
+ 
+  .form-field input {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+ 
+  .register-btn {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .signup-content {
+    width: 95%;
+  }
+ 
+  .signup-content h1 {
+    font-size: 24px;
+  }
+ 
+  .intro-section h2,
+  .signup-box h2 {
+    font-size: 20px;
+  }
+ 
+  .intro-section p {
+    font-size: 16px;
+  }
+ 
+  .signup-box {
+    padding: 1.5rem;
+  }
+ 
+  .form-field input {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+ 
+  .register-btn {
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+ 
+  .already-member {
+    font-size: 14px;
+  }
+}
+
+
+

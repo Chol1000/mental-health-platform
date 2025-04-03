@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Mental Health Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../login/header.css">
+  <link rel="stylesheet" href="../login/footer.css">
+  <link rel="stylesheet" href="faq.css">
+  <style>
+    /* Active link styling */
+    .main-nav .active,
+    .mobile-nav .active {
+      color: #FFD700;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<!-- TOP BAR (Logo & Search) -->
+<header class="top-bar">
+  <div class="logo">
+    <img src="../images/logo.png" alt="MHP Logo">
+  </div>
+  <!-- Desktop Search -->
+  <div class="desktop-search">
+    <input type="text" placeholder="Search website..." id="desktop-search-input">
+    <span class="clear-search">×</span>
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</header>
+
+
+<!-- DESKTOP NAV BAR -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <ul>
+      <li><a href="../home/home.html">HOME</a></li>
+      <li><a href="../aboutus/aboutus.html">ABOUT US</a></li>
+      <li><a href="../community/community.html">COMMUNITY</a></li>
+      <li><a href="../resources/resources.html">RESOURCES</a></li>
+      <li><a href="../contacts/contacts.html">CONTACTS</a></li>
+    </ul>
+    <a href="../login/login.html" class="user-info">
+      <span class="user-name">Sign In</span>
+    </a>
+  </div>
+</nav>
+
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <!-- Mobile Search -->
+    <div class="mobile-search-container">
+      <input type="text" placeholder="Search ..." id="mobile-search-input">
+      <span class="clear-search">×</span>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="../home/home.html">HOME</a></li>
+        <li><a href="../aboutus/aboutus.html">ABOUT US</a></li>
+        <li><a href="../community/community.html">COMMUNITY</a></li>
+        <li><a href="../resources/resources.html">RESOURCES</a></li>
+        <li><a href="../contacts/contacts.html">CONTACTS</a></li>
+      </ul>
+    </nav>
+    <a href="../login/login.html" class="mobile-user-info">
+      <span class="mobile-user-name">Sign In</span>
+    </a>
+  </div>
+</div>
+
+
+<!-- MAIN CONTENT -->
+<main class="faq-content">
+  <h1>FREQUENTLY ASKED QUESTIONS</h1>
+  <section class="intro-section">
+    <h2>Find Answers to Common Questions</h2>
+    <p>We've compiled answers to the most frequently asked questions about our platform and services.</p>
+  </section>
+
+
+  <!-- Search Bar -->
+  <div class="search-faq">
+    <input type="text" placeholder="Search FAQ..." id="faq-search-input">
+    <span class="clear-search">×</span>
+  </div>
+
+
+  <!-- FAQ SECTIONS -->
+  <!-- GENERAL QUESTIONS -->
+  <section class="faq-section">
+    <h3>General Questions</h3>
+
+
+    <div class="faq-q">
+      <p class="question">What is this platform about?</p>
+      <p class="answer">Our platform provides mental health resources, community support, and self-care tools to help users improve their well-being.</p>
+    </div>
+
+
+    <div class="faq-q">
+      <p class="question">Is this platform free to use?</p>
+      <p class="answer">Yes! Access to our resources, community discussions, and self-help tools is completely free.</p>
+    </div>
+
+
+    <div class="faq-q">
+      <p class="question">Do I need an account to use the platform?</p>
+      <p class="answer">You can browse public resources, but signing up gives access to personalized activities, community discussions, and exclusive content.</p>
+    </div>
+  </section>
+
+
+  <!-- PRIVACY & SAFETY -->
+  <section class="faq-section">
+    <h3>Privacy & Safety</h3>
+
+
+    <div class="faq-q">
+      <p class="question">Is my information private?</p>
+      <p class="answer">Yes! We prioritize your privacy, and you can choose to remain anonymous in discussions.</p>
+    </div>
+
+
+    <div class="faq-q">
+      <p class="question">Can I delete my account?</p>
+      <p class="answer">Yes. You can delete your account anytime in the Profile Settings section.</p>
+    </div>
+
+
+    <div class="faq-q">
+      <p class="question">What should I do if I see harmful or inappropriate content?</p>
+      <p class="answer">Use the Report button to notify our moderation team, and we'll take action.</p>
+    </div>
+  </section>
+
+
+  <!-- COMMUNITY & SUPPORT -->
+  <section class="faq-section">
+    <h3>Community & Support</h3>
+
+
+    <div class="faq-q">
+      <p class="question">How do I join the community discussions?</p>
+      <p class="answer">Simply sign up and start engaging in forum discussions or share your experiences.</p>
+    </div>
+
+
+    <div class="faq-q">
+      <p class="question">Can I post anonymously in the community?</p>
+      <p class="answer">Yes! You can choose to hide your identity when posting.</p>
+    </div>
+
+
+    <div class="faq-q">
+      <p class="question">Is this platform a substitute for therapy?</p>
+      <p class="answer">No. While we provide self-help tools and peer support, our platform does not replace professional therapy. If you're struggling, we encourage reaching out to a licensed therapist.</p>
+    </div>
+  </section>
+
+
+  <!-- SELF-HELP TOOLS & RESOURCES -->
+  <section class="faq-section">
+    <h3>Self-Help Tools & Resources</h3>
+
+
+    <div class="faq-q">
+      <p class="question">How do I use the self-care tools?</p>
+      <p class="answer">Go to the Self-Help Tools section, where you'll find journaling prompts, mindfulness exercises, and stress management worksheets.</p>
+    </div>
+
+
+    <div class="faq-q">
+      <p class="question">Where can I find mental health articles and videos?</p>
+      <p class="answer">Visit our Resources section for expert-written articles, guided meditations, and mental health webinars.</p>
+    </div>
+  </section>
+
+
+  <!-- ACCOUNT HELP -->
+  <section class="faq-section">
+    <h3>Account Help</h3>
+
+
+    <div class="faq-q">
+      <p class="question">I forgot my password. How do I reset it?</p>
+      <p class="answer">Click "Forgot Password" on the login page and follow the instructions to reset it.</p>
+    </div>
+
+
+    <div class="faq-q">
+      <p class="question">How can I change my username or profile picture?</p>
+      <p class="answer">Go to Profile Settings and update your information.</p>
+    </div>
+
+
+    <div class="faq-q">
+      <p class="question">Can I suggest new features or improvements?</p>
+      <p class="answer">Absolutely! Contact us via our contact form, and we'd love to hear your ideas.</p>
+    </div>
+  </section>
+
+
+  <!-- STILL HAVE QUESTIONS? -->
+  <section class="faq-section">
+    <h3>Still Have Questions?</h3>
+    <p class="contact-note">
+      If your question isn't listed here, feel free to <a href="../contacts/contacts.html">contact us</a>
+      or ask in the community!
+    </p>
+  </section>
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <div class="footer-item">
+      <span>Stay Connected</span>
+      <img src="../images/github-icon (1).png" alt="GitHub">
+    </div>
+    <div class="footer-item">
+      <span>Q & A</span>
+      <img src="../images/qa-icon.png" alt="Q & A">
+    </div>
+    <div class="footer-item">
+      <span>Contact Us</span>
+      <img src="../images/contact-icon.png" alt="Contact">
+    </div>
+  </div>
+  <hr>
+  <p>Copyright © 2025. All rights reserved</p>
+  <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+</footer>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu toggle functionality
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+
+
+        const lines = this.querySelectorAll('.line');
+        if (this.classList.contains('active')) {
+          lines[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+          lines[1].style.opacity = '0';
+          lines[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+        } else {
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+
+      document.addEventListener('click', function(e) {
+        if (mobileMenu.classList.contains('active') &&
+            !e.target.closest('.mobile-menu') &&
+            !e.target.closest('.hamburger')) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          body.classList.remove('no-scroll');
+         
+          const lines = hamburger.querySelectorAll('.line');
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+
+      mobileMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+
+
+    // Search functionality
+    const desktopSearchInput = document.getElementById('desktop-search-input');
+    const desktopSearchContainer = document.querySelector('.desktop-search');
+   
+    if (desktopSearchInput && desktopSearchContainer) {
+      const desktopClearSearch = desktopSearchContainer.querySelector('.clear-search');
+     
+      desktopSearchInput.addEventListener('input', function() {
+        desktopClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+     
+      desktopClearSearch.addEventListener('click', function() {
+        desktopSearchInput.value = '';
+        desktopClearSearch.style.display = 'none';
+        desktopSearchInput.focus();
+      });
+    }
+
+
+    const mobileSearchInput = document.getElementById('mobile-search-input');
+    const mobileSearchContainer = document.querySelector('.mobile-search-container');
+   
+    if (mobileSearchInput && mobileSearchContainer) {
+      const mobileClearSearch = mobileSearchContainer.querySelector('.clear-search');
+     
+      mobileSearchInput.addEventListener('input', function() {
+        mobileClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+     
+      mobileClearSearch.addEventListener('click', function() {
+        mobileSearchInput.value = '';
+        mobileClearSearch.style.display = 'none';
+        mobileSearchInput.focus();
+      });
+    }
+
+
+    // FAQ search functionality
+    const faqSearchInput = document.getElementById('faq-search-input');
+    const faqSearchContainer = document.querySelector('.search-faq');
+   
+    if (faqSearchInput && faqSearchContainer) {
+      const faqClearSearch = faqSearchContainer.querySelector('.clear-search');
+     
+      faqSearchInput.addEventListener('input', function() {
+        faqClearSearch.style.display = this.value ? 'block' : 'none';
+        filterFAQs(this.value.toLowerCase());
+      });
+     
+      faqClearSearch.addEventListener('click', function() {
+        faqSearchInput.value = '';
+        faqClearSearch.style.display = 'none';
+        resetFAQVisibility();
+        faqSearchInput.focus();
+      });
+    }
+
+
+    function filterFAQs(searchTerm) {
+      const questions = document.querySelectorAll('.faq-q');
+      let hasMatches = false;
+     
+      questions.forEach(q => {
+        const questionText = q.querySelector('.question').textContent.toLowerCase();
+        const answerText = q.querySelector('.answer').textContent.toLowerCase();
+       
+        if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+          q.style.display = 'block';
+          hasMatches = true;
+        } else {
+          q.style.display = 'none';
+        }
+      });
+
+
+      // Highlight matching text
+      if (searchTerm.length > 0) {
+        const regex = new RegExp(searchTerm, 'gi');
+        document.querySelectorAll('.question, .answer').forEach(el => {
+          const text = el.textContent;
+          el.innerHTML = text.replace(regex, match => `<span class="highlight">${match}</span>`);
+        });
+      }
+    }
+
+
+    function resetFAQVisibility() {
+      document.querySelectorAll('.faq-q').forEach(q => {
+        q.style.display = 'block';
+      });
+      document.querySelectorAll('.highlight').forEach(el => {
+        const parent = el.parentNode;
+        parent.textContent = parent.textContent;
+      });
+    }
+  });
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,227 @@
+/* faq.css - Only specific styles for FAQ page */
+
+
+/* MAIN CONTENT STYLES */
+.faq-content {
+  width: 90%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  flex: 1;
+  text-align: center;
+}
+
+
+.faq-content h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #002365;
+}
+
+
+/* INTRO SECTION */
+.intro-section {
+  margin-bottom: 3rem;
+}
+
+
+.intro-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #086D2B;
+}
+
+
+.intro-section p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0.5rem auto;
+  max-width: 800px;
+  color: #333;
+}
+
+
+/* FAQ SEARCH */
+.search-faq {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto 3rem;
+  width: 100%;
+}
+
+
+.search-faq input {
+  width: 100%;
+  padding: 12px 40px 12px 20px;
+  border: 2px solid #086D2B;
+  border-radius: 30px;
+  font-size: 16px;
+  font-family: 'Gowun Batang', serif;
+  transition: all 0.3s ease;
+}
+
+
+.search-faq input:focus {
+  outline: none;
+  border-color: #002365;
+  box-shadow: 0 0 8px rgba(0, 35, 101, 0.2);
+}
+
+
+.search-faq .clear-search {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #999;
+  display: none;
+}
+
+
+/* FAQ SECTIONS */
+.faq-section {
+  margin-bottom: 3rem;
+  text-align: left;
+}
+
+
+.faq-section h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #002365;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #FFD700;
+}
+
+
+.faq-q {
+  margin-bottom: 1.5rem;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+
+.question {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #002365;
+}
+
+
+.answer {
+  font-family: 'Gowun Batang', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+
+.highlight {
+  background-color: #FFD700;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+
+/* CONTACT NOTE */
+.contact-note {
+  font-family: 'Gowun Batang', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-top: 1rem;
+}
+
+
+.contact-note a {
+  color: #086D2B;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+
+.contact-note a:hover {
+  color: #002365;
+  text-decoration: underline;
+}
+
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .faq-content h1 {
+    font-size: 28px;
+  }
+ 
+  .intro-section h2 {
+    font-size: 24px;
+  }
+ 
+  .intro-section p {
+    font-size: 18px;
+  }
+ 
+  .faq-section h3 {
+    font-size: 22px;
+  }
+ 
+  .question {
+    font-size: 17px;
+  }
+ 
+  .answer {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .faq-content {
+    width: 95%;
+  }
+ 
+  .faq-content h1 {
+    font-size: 24px;
+  }
+ 
+  .intro-section h2 {
+    font-size: 20px;
+  }
+ 
+  .intro-section p {
+    font-size: 16px;
+  }
+ 
+  .faq-section h3 {
+    font-size: 20px;
+  }
+ 
+  .faq-q {
+    padding: 1rem;
+  }
+ 
+  .question {
+    font-size: 16px;
+  }
+ 
+  .answer {
+    font-size: 14px;
+  }
+ 
+  .contact-note {
+    font-size: 16px;
+  }
+}
+
+
+
