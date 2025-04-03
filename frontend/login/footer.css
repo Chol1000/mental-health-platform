@@ -1,0 +1,74 @@
+/****************************
+  FOOTER STYLES
+  (Common to all pages)
+*****************************/
+footer {
+    background: #002365;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-item {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .footer-item img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+  }
+  
+  footer hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    width: 80%;
+    margin: 1rem auto;
+  }
+  
+  footer p {
+    margin: 0.5rem 0;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  footer a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  footer a:hover {
+    color: #FFF;
+  }
+  
+  /****************************
+    FOOTER MEDIA QUERIES
+  *****************************/
+  @media (max-width: 768px) {
+    .footer-links {
+      gap: 2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-links {
+      gap: 1.5rem;
+    }
+    
+    footer p {
+      font-size: 14px;
+    }
+  }
