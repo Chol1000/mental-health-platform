@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mental Wellness Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="dashboard.css">
+  <style>
+    .mood-select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .today-progress {
+      background-color: #f8f9fa;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+    #currentMoodDisplay {
+      font-weight: bold;
+      color: #4a6fa5;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .close-modal {
+      color: #aaa;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close-modal:hover {
+      color: black;
+    }
+    .error-message {
+      color: red;
+      font-size: 0.8em;
+      margin-top: 5px;
+      display: none;
+    }
+    .success-message {
+      color: green;
+      font-weight: bold;
+      margin-bottom: 15px;
+      display: none;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background-color: #4a6fa5;
+      color: white;
+    }
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+    }
+    .btn-danger {
+      background-color: #dc3545;
+      color: white;
+    }
+    .error {
+      border-color: red;
+    }
+    .chart-bar {
+      width: 40px;
+      margin: 0 10px;
+      display: inline-block;
+      vertical-align: bottom;
+      background-color: #4a6fa5;
+      position: relative;
+    }
+    .chart-bar-label {
+      position: absolute;
+      bottom: -25px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.8em;
+    }
+    .progress-chart {
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .invalid-feedback {
+      color: red;
+      font-size: 0.8em;
+      margin-top: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <img src="../../images/logo.png" alt="Logo" class="logo">
+      <p class="welcome">Welcome Back</p>
+      <p class="username" id="usernameDisplay">Hello, <span id="userFirstName">User</span></p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+      <div class="content-header">
+        <h1 class="content-title">Dashboard</h1>
+        <div class="date-display" id="currentDate"></div>
+      </div>
+      
+      <!-- Today's Progress Section -->
+      <div class="today-progress">
+        <h3>Today's Mood</h3>
+        <p id="currentMoodDisplay">No check-in yet today</p>
+      </div>
+      
+      <!-- Cards Grid -->
+      <div class="cards-grid">
+        <div class="card" id="dailyCheckinCard">
+          <div class="card-icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3 class="card-title">Daily Check-in</h3>
+          <p class="card-desc">Track your mood and mental state for today</p>
+          <a href="#" class="card-link">Check in now <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="card" id="journalCard">
+          <div class="card-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3 class="card-title">Journal</h3>
+          <p class="card-desc">Record your thoughts and reflections</p>
+          <a href="#" class="card-link">Write entry <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="card" id="progressCard">
+          <div class="card-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3 class="card-title">Progress</h3>
+          <p class="card-desc">View your mental health journey</p>
+          <a href="#" class="card-link">See progress <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="quick-links">
+        <h2 class="section-title">Quick Links</h2>
+        <div class="links-grid">
+          <a href="#" id="editProfileLink" class="link-item">
+            <i class="fas fa-user-edit"></i> Edit Profile
+          </a>
+          <a href="../home/home.html" class="link-item">
+            <i class="fas fa-home"></i> Home
+          </a>
+          <a href="../aboutus/aboutus.html" class="link-item">
+            <i class="fas fa-info-circle"></i> About Us
+          </a>
+          <a href="../community/community.html" class="link-item">
+            <i class="fas fa-users"></i> Community
+          </a>
+          <a href="../resources/resources.html" class="link-item">
+            <i class="fas fa-book-open"></i> Resources
+          </a>
+          <a href="../contacts/contacts.html" class="link-item">
+            <i class="fas fa-envelope"></i> Contacts
+          </a>
+          <a href="../faq/faq.html" class="link-item">
+            <i class="fas fa-question-circle"></i> FAQ
+          </a>
+          <a href="#" id="deleteAccountLink" class="link-item">
+            <i class="fas fa-user-slash"></i> Delete Account
+          </a>
+          <a href="#" id="logoutLink" class="link-item">
+            <i class="fas fa-sign-out-alt"></i> Log Out
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Daily Check-in Modal -->
+  <div id="checkinModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Daily Check-in</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      <form id="checkinForm">
+        <input type="hidden" id="userId" value="">
+        
+        <div class="form-group">
+          <label for="mood">How are you feeling today?</label>
+          <select class="mood-select" id="mood" required>
+            <option value="">Select your mood</option>
+            <option value="Sad">Sad</option>
+            <option value="Anxious">Anxious</option>
+            <option value="Stressed">Stressed</option>
+            <option value="Annoyed">Annoyed</option>
+            <option value="Snubbed">Snubbed</option>
+            <option value="Tired">Tired</option>
+            <option value="Exhausted">Exhausted</option>
+            <option value="Angry">Angry</option>
+            <option value="Hopeless">Hopeless</option>
+            <option value="Insecure">Insecure</option>
+            <option value="Fearful">Fearful</option>
+            <option value="Regretful">Regretful</option>
+            <option value="Grieving">Grieving</option>
+            <option value="Self-Doubt">Self-Doubt</option>
+            <option value="Lonely">Lonely</option>
+            <option value="Ashamed">Ashamed</option>
+            <option value="Bitter">Bitter</option>
+            <option value="Let Down">Let Down</option>
+            <option value="Confused">Confused</option>
+            <option value="Curious">Curious</option>
+            <option value="Numb">Numb</option>
+            <option value="Lost">Lost</option>
+            <option value="Distracted">Distracted</option>
+            <option value="Impatient">Impatient</option>
+            <option value="Neutral">Neutral</option>
+            <option value="Social">Social</option>
+            <option value="Inspired">Inspired</option>
+            <option value="Silly">Silly</option>
+            <option value="Relaxed">Relaxed</option>
+            <option value="Proud">Proud</option>
+            <option value="Hopeful">Hopeful</option>
+            <option value="Grateful">Grateful</option>
+            <option value="Motivated">Motivated</option>
+            <option value="Loved">Loved</option>
+            <option value="Excited">Excited</option>
+            <option value="Happy">Happy</option>
+            <option value="Helpless">Helpless</option>
+            <option value="Paranoid">Paranoid</option>
+            <option value="Trapped">Trapped</option>
+            <option value="Disliked">Disliked</option>
+          </select>
+          <div id="mood_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="energyLevel">Energy Level</label>
+          <input type="range" id="energyLevel" min="1" max="5" value="3" class="form-control">
+          <div class="mood-levels">
+            <span>Low</span>
+            <span>Medium</span>
+            <span>High</span>
+          </div>
+          <div id="energyLevel_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="anxietyLevel">Anxiety Level</label>
+          <input type="range" id="anxietyLevel" min="1" max="5" value="3" class="form-control">
+          <div class="mood-levels">
+            <span>Low</span>
+            <span>Medium</span>
+            <span>High</span>
+          </div>
+          <div id="anxietyLevel_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" class="form-control" placeholder="Anything you'd like to share about how you're feeling today?"></textarea>
+          <div id="notes_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary close-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Journal Modal -->
+  <div id="journalModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>New Journal Entry</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      <form id="journalForm">
+        <input type="hidden" id="journalUserId" value="">
+        
+        <div class="form-group">
+          <label for="entryTitle">Title</label>
+          <input type="text" id="entryTitle" class="form-control" required>
+          <div id="entryTitle_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="entryContent">Your Thoughts</label>
+          <textarea id="entryContent" class="form-control" required placeholder="Write your thoughts here..."></textarea>
+          <div id="entryContent_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="entryMood">Current Mood (Optional)</label>
+          <select class="mood-select" id="entryMood">
+            <option value="">No mood selected</option>
+            <option value="Sad">Sad</option>
+            <option value="Anxious">Anxious</option>
+            <!-- Include all mood options here as well -->
+            <option value="Disliked">Disliked</option>
+          </select>
+          <div id="entryMood_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="isPrivate"> Keep this entry private
+          </label>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary close-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Progress Modal -->
+  <div id="progressModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Your Progress</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      
+      <div class="today-progress">
+        <h3>Today's Status</h3>
+        <p id="todayMoodDisplay">Loading...</p>
+      </div>
+      
+      <div class="form-group">
+        <label>Time Range</label>
+        <select id="timeRange" class="form-control">
+          <option value="week">Last 7 Days</option>
+          <option value="month">Last 30 Days</option>
+          <option value="year">Last Year</option>
+          <option value="all">All Time</option>
+        </select>
+      </div>
+      
+      <div class="progress-chart" id="moodChart">
+        <!-- Chart bars will be inserted here by JavaScript -->
+      </div>
+      
+      <div id="progressInsights">
+        <h3>Insights</h3>
+        <p id="insightsText">Your mood trends and insights will appear here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit Profile Modal -->
+  <div id="editProfileModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Edit Profile</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      <form id="editProfileForm">
+        <input type="hidden" id="editProfileUserId" value="">
+        
+        <div class="form-group">
+          <label for="editFirstName">First Name</label>
+          <input type="text" id="editFirstName" class="form-control" required>
+          <div id="editFirstName_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="editLastName">Last Name</label>
+          <input type="text" id="editLastName" class="form-control" required>
+          <div id="editLastName_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="editEmail">Email</label>
+          <input type="email" id="editEmail" class="form-control" required>
+          <div id="editEmail_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="currentPassword">Current Password*</label>
+          <input type="password" id="currentPassword" class="form-control" required>
+          <div id="currentPassword_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-group">
+          <label for="editPassword">New Password (leave blank to keep current)</label>
+          <input type="password" id="editPassword" class="form-control">
+          <div id="editPassword_error" class="error-message"></div>
+          <small class="form-text">Password must be at least 8 characters with uppercase, lowercase, and numbers</small>
+        </div>
+        
+        <div class="form-group">
+          <label for="confirmPassword">Confirm New Password</label>
+          <input type="password" id="confirmPassword" class="form-control">
+          <div id="confirmPassword_error" class="error-message"></div>
+        </div>
+        
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary close-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Delete Account Confirmation Modal -->
+  <div id="deleteAccountModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Confirm Account Deletion</h2>
+        <span class="close-modal">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+        <p>All your data will be permanently removed.</p>
+      </div>
+      <div class="form-actions">
+        <button type="button" class="btn btn-secondary close-btn">Cancel</button>
+        <button type="button" id="confirmDeleteBtn" class="btn btn-danger">Delete My Account</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+  <script>
+    // Enhanced logout functionality
+    document.getElementById('logoutLink').addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Show confirmation dialog
+      if (confirm('Are you sure you want to log out?')) {
+        // Clear user data from localStorage
+        localStorage.removeItem('user');
+        
+        // Redirect to home page
+        window.location.href = '../home/home.html';
+      }
+    });
+
+    // Enhanced account deletion functionality
+    document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
+      // Show final confirmation
+      if (confirm('This will permanently delete your account and all data. Are you absolutely sure?')) {
+        // Clear user data from localStorage
+        localStorage.removeItem('user');
+        
+        // Here you would typically also make an API call to delete the account from your backend
+        // Example: 
+        fetch('/api/delete-account', { method: 'DELETE' })
+          .then(response => {
+            if (response.ok) {
+              window.location.href = '../home/home.html';
+            }
+          });
+        
+        // Redirect to home page
+        window.location.href = '../home/home.html';
+      }
+    });
+
+    // Modal open functionality for delete account
+    document.getElementById('deleteAccountLink').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('deleteAccountModal').style.display = 'block';
+    });
+
+    // Modal close functionality
+    document.querySelectorAll('.close-modal, .close-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.modal').forEach(modal => {
+          modal.style.display = 'none';
+        });
+      });
+    });
+
+    // Close modals when clicking outside
+    window.addEventListener('click', function(event) {
+      if (event.target.classList.contains('modal')) {
+        document.querySelectorAll('.modal').forEach(modal => {
+          modal.style.display = 'none';
+        });
+      }
+    });
+
+    // Load user data on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const userData = localStorage.getItem('user');
+      if (userData) {
+        try {
+          const user = JSON.parse(userData);
+          document.getElementById('userFirstName').textContent = user.first_name || 'User';
+        } catch (e) {
+          console.error('Error parsing user data:', e);
+        }
+      } else {
+        // If no user data found, redirect to login
+        window.location.href = '../login/login.html';
+      }
+    });
+  </script>
+</body>
+</html>
