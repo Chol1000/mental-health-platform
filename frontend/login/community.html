@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community - Mental Health Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="community.css">
+  <style>
+    .highlight {
+      background-color: #FFD700;
+      font-weight: bold;
+    }
+    .desktop-search, .mobile-search-container {
+      position: relative;
+    }
+    .clear-search {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #999;
+    }
+    /* Active link styling */
+    .main-nav .active,
+    .mobile-nav .active {
+      color: #FFD700;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR (Logo & Search) -->
+<header class="top-bar">
+  <div class="logo">
+    <img src="../images/logo.png" alt="MHP Logo">
+  </div>
+  
+  <!-- Desktop Search -->
+  <div class="desktop-search">
+    <input type="text" placeholder="Search website..." id="desktop-search-input">
+    <span class="clear-search">×</span>
+  </div>
+  
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</header>
+
+<!-- DESKTOP NAV BAR -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <ul>
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="aboutus.html">ABOUT US</a></li>
+      <li><a href="community.html" class="active">COMMUNITY</a></li>
+      <li><a href="resources.html">RESOURCES</a></li>
+      <li><a href="contacts.html">CONTACTS</a></li>
+    </ul>
+    <a href="../dashboard/dashboard.html" class="user-info">
+      <span class="user-name">Loading...</span>
+    </a>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <!-- Mobile Search -->
+    <div class="mobile-search-container">
+      <input type="text" placeholder="Search website..." id="mobile-search-input">
+      <span class="clear-search">×</span>
+    </div>
+    
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li><a href="community.html" class="active">COMMUNITY</a></li>
+        <li><a href="resources.html">RESOURCES</a></li>
+        <li><a href="contacts.html">CONTACTS</a></li>
+      </ul>
+    </nav>
+    <a href="../dashboard/dashboard.html" class="mobile-user-info">
+      <span class="mobile-user-name">Loading...</span>
+    </a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="community-content">
+  <h1>COMMUNITY</h1>
+  
+  <section class="intro-section">
+    <h2>A Safe Space for Support &amp; Connection</h2>
+    <p>
+      Our Community section is a welcoming space where users can connect, share 
+      experiences, and support one another. We understand that mental health 
+      journeys are personal, but you don't have to go through it alone.
+    </p>
+  </section>
+
+  <section class="features-section">
+    <h2>What You Can Do in the Community Section</h2>
+    <ol class="community-list">
+      <li>Join discussions on mental wellness topics.</li>
+      <li>Share personal experiences in a supportive environment.</li>
+      <li>Offer and receive encouragement from others.</li>
+      <li>Engage in self-care challenges with fellow members.</li>
+    </ol>
+  </section>
+
+  <section class="benefits-section">
+    <h2>Why Join the Community?</h2>
+    <ul class="why-join-list">
+      <li>✔ <strong>Safe &amp; Respectful</strong> – Moderated for kindness and positive interactions.</li>
+      <li>✔ <strong>Supportive Environment</strong> – Connect with people who understand.</li>
+      <li>✔ <strong>No Judgment, Just Encouragement</strong> – Share at your own pace.</li>
+    </ul>
+  </section>
+
+  <div class="posts-layout">
+    <!-- Create Post Section -->
+    <div class="post-form-container">
+      <h2>Create a Post</h2>
+      <form id="post-form" class="post-form">
+        <textarea id="post-content" placeholder="Share your thoughts..." required></textarea>
+        <button type="submit">Post</button>
+      </form>
+    </div>
+
+    <!-- Community Posts Section -->
+    <div>
+      <h2>Community Posts</h2>
+      <div id="posts-container" class="posts-container">
+        <!-- Posts will be dynamically added here -->
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Edit Post Modal -->
+<div id="edit-modal" class="edit-modal">
+  <div class="edit-modal-content">
+    <h2>Edit Post</h2>
+    <textarea id="edit-post-content"></textarea>
+    <div class="edit-modal-actions">
+      <button id="cancel-edit">Cancel</button>
+      <button id="save-edit">Save Changes</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <div class="footer-item">
+      <span>Stay Connected</span>
+      <img src="../images/github-icon (1).png" alt="GitHub">
+    </div>
+    <div class="footer-item">
+      <span>Q &amp; A</span>
+      <img src="../images/qa-icon.png" alt="Q & A">
+    </div>
+    <div class="footer-item">
+      <span>Contact Us</span>
+      <img src="../images/contact-icon.png" alt="Contact">
+    </div>
+  </div>
+  <hr>
+  <p>Copyright © 2025. All rights reserved</p>
+  <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+</footer>
+
+<script>
+  // ======================
+  // USER NAME DISPLAY
+  // ======================
+  document.addEventListener('DOMContentLoaded', function() {
+    const userInfo = document.querySelector('.user-info');
+    const userNameElement = document.querySelector('.user-name');
+    const mobileUserInfo = document.querySelector('.mobile-user-info');
+    const mobileUserNameElement = document.querySelector('.mobile-user-name');
+    
+    // Check localStorage for user data
+    const userData = localStorage.getItem('user');
+    
+    function updateUserDisplay() {
+      if (userData) {
+        try {
+          const user = JSON.parse(userData);
+          const displayName = user.first_name;
+          if (userNameElement) userNameElement.textContent = displayName;
+          if (mobileUserNameElement) mobileUserNameElement.textContent = displayName;
+          
+          // Update links
+          if (userInfo) userInfo.href = '../login/dashboard/dashboard.html';
+          if (mobileUserInfo) mobileUserInfo.href = '../login/dashboard/dashboard.html';
+        } catch (e) {
+          console.error('Error parsing user data:', e);
+          const fallback = 'Account';
+          if (userNameElement) userNameElement.textContent = fallback;
+          if (mobileUserNameElement) mobileUserNameElement.textContent = fallback;
+        }
+      } else {
+        const loginText = 'Login';
+        if (userNameElement) userNameElement.textContent = loginText;
+        if (mobileUserNameElement) mobileUserNameElement.textContent = loginText;
+        
+        // Update links
+        if (userInfo) userInfo.href = '../login/login.html';
+        if (mobileUserInfo) mobileUserInfo.href = '../login/login.html';
+      }
+    }
+    
+    updateUserDisplay();
+
+    // ======================
+    // MOBILE MENU TOGGLE
+    // ======================
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+        
+        const lines = this.querySelectorAll('.line');
+        if (this.classList.contains('active')) {
+          lines[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+          lines[1].style.opacity = '0';
+          lines[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+        } else {
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        if (mobileMenu.classList.contains('active') && 
+            !e.target.closest('.mobile-menu') && 
+            !e.target.closest('.hamburger')) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          body.classList.remove('no-scroll');
+          
+          const lines = hamburger.querySelectorAll('.line');
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+      mobileMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+
+    // ======================
+    // SEARCH FUNCTIONALITY
+    // ======================
+    // Desktop Search
+    const desktopSearchInput = document.getElementById('desktop-search-input');
+    const desktopSearchContainer = document.querySelector('.desktop-search');
+    
+    if (desktopSearchInput && desktopSearchContainer) {
+      const desktopClearSearch = desktopSearchContainer.querySelector('.clear-search');
+      
+      desktopSearchInput.addEventListener('input', function() {
+        desktopClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+      
+      desktopClearSearch.addEventListener('click', function() {
+        desktopSearchInput.value = '';
+        desktopClearSearch.style.display = 'none';
+        desktopSearchInput.focus();
+      });
+    }
+
+    // Mobile Search
+    const mobileSearchInput = document.getElementById('mobile-search-input');
+    const mobileSearchContainer = document.querySelector('.mobile-search-container');
+    
+    if (mobileSearchInput && mobileSearchContainer) {
+      const mobileClearSearch = mobileSearchContainer.querySelector('.clear-search');
+      
+      mobileSearchInput.addEventListener('input', function() {
+        mobileClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+      
+      mobileClearSearch.addEventListener('click', function() {
+        mobileSearchInput.value = '';
+        mobileClearSearch.style.display = 'none';
+        mobileSearchInput.focus();
+      });
+    }
+
+    // ======================
+    // COMMUNITY POSTS FUNCTIONALITY (YOUR EXISTING CODE)
+    // ======================
+    const postForm = document.getElementById("post-form");
+    const postsContainer = document.getElementById("posts-container");
+    const editModal = document.getElementById("edit-modal");
+    const editContent = document.getElementById("edit-post-content");
+    const cancelEdit = document.getElementById("cancel-edit");
+    const saveEdit = document.getElementById("save-edit");
+    
+    let posts = [];
+    let currentEditIndex = -1;
+
+    // Render all posts
+    function renderPosts() {
+      postsContainer.innerHTML = "";
+      
+      // Get current user from localStorage
+      const userData = localStorage.getItem('user');
+      const currentUser = userData ? JSON.parse(userData).first_name : "User";
+      
+      posts.forEach((post, index) => {
+        const postElement = document.createElement("div");
+        postElement.classList.add("post");
+        
+        postElement.innerHTML = `
+          <p class="post-author">${post.author}</p>
+          <p class="post-content">${post.content}</p>
+          <div class="post-actions">
+            <button class="reply-btn" data-index="${index}">Reply</button>
+            ${post.author === currentUser ? `
+              <button class="edit-btn" data-index="${index}">Edit</button>
+              <button class="delete-btn" data-index="${index}">Delete</button>
+            ` : ''}
+          </div>
+          <div class="replies-container" id="replies-${index}">
+            ${post.replies.map(reply => `
+              <div class="reply">
+                <p class="reply-author">${reply.author}</p>
+                <p class="reply-content">${reply.content}</p>
+              </div>
+            `).join("")}
+          </div>
+        `;
+        
+        postsContainer.appendChild(postElement);
+      });
+
+      // Add event listeners
+      document.querySelectorAll('.reply-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const index = e.target.dataset.index;
+          const replyContent = prompt("Enter your reply:");
+          if (replyContent && replyContent.trim()) {
+            const replyAuthor = currentUser;
+            if (!posts[index].replies) posts[index].replies = [];
+            posts[index].replies.push({
+              author: replyAuthor,
+              content: replyContent
+            });
+            renderPosts();
+          }
+        });
+      });
+
+      document.querySelectorAll('.edit-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const index = e.target.dataset.index;
+          currentEditIndex = index;
+          editContent.value = posts[index].content;
+          editModal.style.display = "flex";
+        });
+      });
+
+      document.querySelectorAll('.delete-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          if (confirm("Are you sure you want to delete this post?")) {
+            const index = e.target.dataset.index;
+            posts.splice(index, 1);
+            renderPosts();
+          }
+        });
+      });
+    }
+
+    // Handle new post submission
+    postForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const content = document.getElementById("post-content").value.trim();
+      if (content) {
+        const userData = localStorage.getItem('user');
+        const author = userData ? JSON.parse(userData).first_name : "User";
+        
+        posts.unshift({
+          author: author,
+          content: content,
+          replies: []
+        });
+        
+        document.getElementById("post-content").value = "";
+        renderPosts();
+      }
+    });
+
+    // Handle edit modal
+    cancelEdit.addEventListener('click', () => {
+      editModal.style.display = "none";
+    });
+
+    saveEdit.addEventListener('click', () => {
+      if (currentEditIndex >= 0) {
+        const newContent = editContent.value.trim();
+        if (newContent) {
+          posts[currentEditIndex].content = newContent;
+          editModal.style.display = "none";
+          renderPosts();
+        }
+      }
+    });
+
+    // Close modal when clicking outside
+    editModal.addEventListener('click', (e) => {
+      if (e.target === editModal) {
+        editModal.style.display = "none";
+      }
+    });
+
+    // Initial render
+    renderPosts();
+  });
+</script>
+</body>
+</html>
