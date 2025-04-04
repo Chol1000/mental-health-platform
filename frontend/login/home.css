@@ -1,0 +1,194 @@
+/****************************
+  MAIN CONTENT
+  (Unique to home.html)
+*****************************/
+.feeling-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  flex: 1;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Title & Subtitle */
+.feeling-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.feeling-subtitle {
+  font-family: 'Gowun Batang', serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Intro paragraph */
+.feeling-intro {
+  width: 80%;
+  margin: 0 auto 2rem;
+  font-family: 'Gowun Batang', serif;
+  font-size: 20px;
+  line-height: 29px;
+  color: #000;
+}
+
+/* Search bar */
+.search-feeling {
+  position: relative;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.search-feeling input {
+  width: 100%;
+  padding: 12px 20px;
+  padding-right: 40px;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.search-feeling input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+.search-feeling .search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  cursor: pointer;
+}
+
+.search-feeling .clear-search {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  display: none;
+}
+
+.search-feeling .clear-search:hover {
+  color: #333;
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  grid-column: 1 / -1;
+  display: none;
+  padding: 2rem;
+  color: #666;
+}
+
+/* Feelings Grid */
+.feelings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.feeling-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #F5F5F5;
+  border: 1px solid #086D2B;
+  box-shadow: 0px 3px 4px #086D2B;
+  border-radius: 15px;
+  width: 130px;
+  height: 74px;
+  font-family: 'Gowun Batang', serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feeling-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.feeling-card img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/* Additional note & link below the grid */
+.feeling-extra {
+  font-family: 'Gowun Batang', serif;
+  font-size: 20px;
+  margin-top: 1rem;
+  color: #000;
+}
+
+.feeling-extra .click-here {
+  color: #002365;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/****************************
+  MEDIA QUERIES
+  (Only for home-specific content)
+*****************************/
+@media (max-width: 768px) {
+  .feeling-subtitle {
+    font-size: 24px;
+  }
+  .feeling-intro {
+    font-size: 18px;
+    width: 95%;
+  }
+  .search-feeling {
+    width: 260px;
+  }
+  .feelings-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 0.8rem;
+  }
+  .feeling-card {
+    width: 110px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feeling-subtitle {
+    font-size: 20px;
+  }
+  .feeling-intro {
+    font-size: 16px;
+  }
+  .search-feeling {
+    width: 220px;
+  }
+  .feelings-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .feeling-card {
+    width: 100px;
+    height: 64px;
+    font-size: 14px;
+  }
+  .feeling-card img {
+    width: 20px;
+    height: 20px;
+  }
+}
