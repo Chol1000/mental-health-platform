@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANGRY 😡 - Mental Health Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../footer.css">
+  <link rel="stylesheet" href="angry.css">
+  <style>
+    .highlight {
+      background-color: #FFD700;
+      font-weight: bold;
+    }
+    .desktop-search, .mobile-search-container {
+      position: relative;
+    }
+    .clear-search {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #999;
+    }
+    /* Active link styling */
+    .main-nav .active,
+    .mobile-nav .active {
+      color: #FFD700;
+      font-weight: bold;
+    }
+    /* Typing animation */
+    .typing-dots span {
+      display: inline-block;
+      animation: bounce 1.5s infinite ease-in-out;
+      opacity: 0.6;
+    }
+    .typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); opacity: 0.6; }
+      50% { transform: translateY(-5px); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+<!-- TOP BAR (Logo & Search) -->
+<header class="top-bar">
+  <div class="logo">
+    <img src="../../images/logo.png" alt="MHP Logo">
+  </div>
+  <!-- Desktop Search -->
+  <div class="desktop-search">
+    <input type="text" placeholder="Search website..." id="desktop-search-input">
+    <span class="clear-search">×</span>
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</header>
+
+<!-- DESKTOP NAV BAR -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <ul>
+      <li><a href="../home.html">HOME</a></li>
+      <li><a href="../aboutus.html">ABOUT US</a></li>
+      <li><a href="../community.html">COMMUNITY</a></li>
+      <li><a href="../resources.html">RESOURCES</a></li>
+      <li><a href="../contacts.html">CONTACTS</a></li>
+    </ul>
+    <a href="../dashboard/dashboard.html" class="user-info">
+      <span class="user-name">Loading...</span>
+    </a>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <!-- Mobile Search -->
+    <div class="mobile-search-container">
+      <input type="text" placeholder="Search ..." id="mobile-search-input">
+      <span class="clear-search">×</span>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="../home.html">HOME</a></li>
+        <li><a href="../aboutus.html">ABOUT US</a></li>
+        <li><a href="../community.html">COMMUNITY</a></li>
+        <li><a href="../resources.html">RESOURCES</a></li>
+        <li><a href="../contacts.html">CONTACTS</a></li>
+      </ul>
+    </nav>
+    <a href="../dashboard/dashboard.html" class="mobile-user-info">
+      <span class="mobile-user-name">Loading...</span>
+    </a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="angry-content">
+  <h1>ANGRY 😡</h1>
+
+  <section class="intro-section">
+    <h2>Understanding Anger</h2>
+    <p>
+      Anger is an intense emotional state triggered by perceived injustice, frustration, or threats. 
+      Our goal is to provide you with meaningful activities that help you navigate and process your 
+      emotions in a healthy way. Each activity is designed to offer comfort, understanding, and relief.
+    </p>
+    <p>
+      In addition, our AI Chatbot is here to assist you in understanding and managing your emotions 
+      better. It provides personalized suggestions, journaling prompts, and guided exercises tailored 
+      to your needs.
+    </p>
+  </section>
+
+  <section class="activities-section">
+    <h2>Activities</h2>
+    <ul class="activity-list">
+      <li>
+        <strong>CONTROLLED BREATHING:</strong> Inhale deeply, hold, and exhale slowly to regain control.
+      </li>
+      <li>
+        <strong>PHYSICAL RELEASE:</strong> Engage in exercises like running, boxing, or yoga.
+      </li>
+      <li>
+        <strong>JOURNALING:</strong> Write down your thoughts before reacting impulsively.
+      </li>
+      <li>
+        <strong>LISTENING TO CALMING SOUNDS:</strong> Nature sounds or instrumental music can reduce anger intensity.
+      </li>
+      <li>
+        <strong>PRACTICING EMPATHY:</strong> Consider different perspectives to de-escalate emotions.
+      </li>
+    </ul>
+  </section>
+
+  <section class="helpful-links">
+    <h3>Helpful Links:</h3>
+    <ul>
+      <li><a href="https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/anger-management/art-20045434">ANGER MANAGEMENT STRATEGIES</a></li>
+    </ul>
+  </section>
+
+  <section class="ai-chatbot">
+    <h2>Chat with AI</h2>
+    <p>Ask the AI for personalized recommendations based on your feelings.</p>
+
+    <!-- Chat Interface -->
+    <div class="chat-container">
+      <div class="chat-box">
+        <div class="chat-messages" id="chat-messages">
+          <!-- Messages will appear here -->
+          <div class="message ai-message">
+            <p><strong>AI:</strong> Hello! I'm here to help you with your feelings of anger. Would you like some personalized recommendations?</p>
+          </div>
+        </div>
+        <form class="chat-input" id="chat-form">
+          <input type="text" id="user-message" placeholder="Type your message here..." required>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="feedback-section">
+    <h2>Feedback</h2>
+    <p>We value your input! Please share your thoughts on how we can improve this platform.</p>
+    <form id="feedback-form" class="feedback-form">
+      <textarea name="feedback" id="feedback-text" placeholder="Write your feedback here..." required></textarea>
+      <button type="submit">Submit Feedback</button>
+    </form>
+    <div id="feedback-success" style="display:none; color:green;">
+      Thank you for your feedback!
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <div class="footer-item">
+      <span>Stay Connected</span>
+      <img src="../../images/github-icon (1).png" alt="GitHub">
+    </div>
+    <div class="footer-item">
+      <span>Q & A</span>
+      <img src="../../images/qa-icon.png" alt="Q & A">
+    </div>
+    <div class="footer-item">
+      <span>Contact Us</span>
+      <img src="../../images/contact-icon.png" alt="Contact">
+    </div>
+  </div>
+  <hr>
+  <p>Copyright © 2025. All rights reserved</p>
+  <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // ======================
+    // USER NAME DISPLAY
+    // ======================
+    const userInfo = document.querySelector('.user-info');
+    const userNameElement = document.querySelector('.user-name');
+    const mobileUserInfo = document.querySelector('.mobile-user-info');
+    const mobileUserNameElement = document.querySelector('.mobile-user-name');
+    
+    // Check localStorage for user data
+    const userData = localStorage.getItem('user');
+    
+    function updateUserDisplay() {
+      if (userData) {
+        try {
+          const user = JSON.parse(userData);
+          const displayName = user.first_name;
+          if (userNameElement) userNameElement.textContent = displayName;
+          if (mobileUserNameElement) mobileUserNameElement.textContent = displayName;
+          
+          // Update links
+          if (userInfo) userInfo.href = '../dashboard/dashboard.html';
+          if (mobileUserInfo) mobileUserInfo.href = '../dashboard/dashboard.html';
+        } catch (e) {
+          console.error('Error parsing user data:', e);
+          const fallback = 'Account';
+          if (userNameElement) userNameElement.textContent = fallback;
+          if (mobileUserNameElement) mobileUserNameElement.textContent = fallback;
+        }
+      } else {
+        const loginText = 'Login';
+        if (userNameElement) userNameElement.textContent = loginText;
+        if (mobileUserNameElement) mobileUserNameElement.textContent = loginText;
+        
+        // Update links
+        if (userInfo) userInfo.href = '../login/login.html';
+        if (mobileUserInfo) mobileUserInfo.href = '../login/login.html';
+      }
+    }
+    
+    updateUserDisplay();
+
+    // ======================
+    // MOBILE MENU TOGGLE
+    // ======================
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+
+        const lines = this.querySelectorAll('.line');
+        if (this.classList.contains('active')) {
+          lines[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+          lines[1].style.opacity = '0';
+          lines[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+        } else {
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        if (mobileMenu.classList.contains('active') && 
+            !e.target.closest('.mobile-menu') && 
+            !e.target.closest('.hamburger')) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          body.classList.remove('no-scroll');
+          
+          const lines = hamburger.querySelectorAll('.line');
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+      mobileMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+
+    // ======================
+    // SEARCH FUNCTIONALITY
+    // ======================
+    const desktopSearchInput = document.getElementById('desktop-search-input');
+    const desktopSearchContainer = document.querySelector('.desktop-search');
+    
+    if (desktopSearchInput && desktopSearchContainer) {
+      const desktopClearSearch = desktopSearchContainer.querySelector('.clear-search');
+      
+      desktopSearchInput.addEventListener('input', function() {
+        desktopClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+      
+      desktopClearSearch.addEventListener('click', function() {
+        desktopSearchInput.value = '';
+        desktopClearSearch.style.display = 'none';
+        desktopSearchInput.focus();
+      });
+    }
+
+    const mobileSearchInput = document.getElementById('mobile-search-input');
+    const mobileSearchContainer = document.querySelector('.mobile-search-container');
+    
+    if (mobileSearchInput && mobileSearchContainer) {
+      const mobileClearSearch = mobileSearchContainer.querySelector('.clear-search');
+      
+      mobileSearchInput.addEventListener('input', function() {
+        mobileClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+      
+      mobileClearSearch.addEventListener('click', function() {
+        mobileSearchInput.value = '';
+        mobileClearSearch.style.display = 'none';
+        mobileSearchInput.focus();
+      });
+    }
+
+    // ======================
+    // AI CHAT WITH REAL API
+    // ======================
+    const chatForm = document.getElementById('chat-form');
+    const chatMessages = document.getElementById('chat-messages');
+    const userMessageInput = document.getElementById('user-message');
+    
+    chatForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const message = userMessageInput.value.trim();
+      const user = JSON.parse(localStorage.getItem('user'));
+      
+      if (!message || !user?.id) return;
+      
+      // Add user message to chat
+      addMessageToChat('user', message);
+      userMessageInput.value = '';
+      
+      try {
+        // Show typing indicator
+        const typingIndicator = addTypingIndicator();
+        
+        // Call our backend API
+        const response = await fetch('https://mental-health-platform-pro4.onrender.com/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            user_id: user.id,
+            message: message,
+            emotion: 'Angry' // Hardcoded for angry.html
+          })
+        });
+        
+        // Remove typing indicator
+        chatMessages.removeChild(typingIndicator);
+        
+        if (!response.ok) throw new Error('API request failed');
+        
+        const data = await response.json();
+        if (data.success) {
+          addMessageToChat('ai', data.reply);
+        } else {
+          throw new Error(data.message);
+        }
+      } catch (error) {
+        console.error('Chat error:', error);
+        addMessageToChat('ai', "I'm having trouble responding. Please try again later.");
+      }
+    });
+    
+    function addTypingIndicator() {
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'message ai-message typing';
+      typingDiv.innerHTML = '<p><strong>AI:</strong> <span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></p>';
+      chatMessages.appendChild(typingDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+      return typingDiv;
+    }
+    
+    function addMessageToChat(sender, message) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${sender}-message`;
+      messageDiv.innerHTML = `<p><strong>${sender === 'ai' ? 'AI' : 'You'}:</strong> ${message}</p>`;
+      chatMessages.appendChild(messageDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // ======================
+    // FEEDBACK SUBMISSION
+    // ======================
+    const feedbackForm = document.getElementById('feedback-form');
+    const feedbackSuccess = document.getElementById('feedback-success');
+    
+    feedbackForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const user = JSON.parse(localStorage.getItem('user'));
+      const feedbackText = document.getElementById('feedback-text').value.trim();
+      
+      if (!feedbackText || !user?.id) return;
+      
+      try {
+        const response = await fetch('https://mental-health-platform-pro4.onrender.com/api/feedback', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            user_id: user.id,
+            emotion: 'Angry', // Hardcoded for angry.html
+            text: feedbackText
+          })
+        });
+        
+        if (response.ok) {
+          const data = await response.json();
+          if (data.success) {
+            feedbackForm.style.display = 'none';
+            feedbackSuccess.style.display = 'block';
+            setTimeout(() => {
+              feedbackForm.style.display = 'block';
+              feedbackSuccess.style.display = 'none';
+              document.getElementById('feedback-text').value = '';
+            }, 3000);
+          }
+        } else {
+          throw new Error('Feedback submission failed');
+        }
+      } catch (error) {
+        console.error('Feedback error:', error);
+        alert('Failed to submit feedback. Please try again.');
+      }
+    });
+  });
+</script>
+</body>
+</html>
