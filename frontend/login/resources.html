@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources - Mental Health Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="resources.css">
+  <style>
+    .highlight {
+      background-color: #FFD700;
+      font-weight: bold;
+    }
+    .desktop-search, .mobile-search-container {
+      position: relative;
+    }
+    .clear-search {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #999;
+    }
+    /* Active link styling */
+    .main-nav .active,
+    .mobile-nav .active {
+      color: #FFD700;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR (Logo & Search) -->
+<header class="top-bar">
+  <div class="logo">
+    <img src="../images/logo.png" alt="MHP Logo">
+  </div>
+  
+  <!-- Desktop Search -->
+  <div class="desktop-search">
+    <input type="text" placeholder="Search website..." id="desktop-search-input">
+    <span class="clear-search">×</span>
+  </div>
+  
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</header>
+
+<!-- DESKTOP NAV BAR -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <ul>
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="aboutus.html">ABOUT US</a></li>
+      <li><a href="community.html">COMMUNITY</a></li>
+      <li><a href="resources.html" class="active">RESOURCES</a></li>
+      <li><a href="contacts.html">CONTACTS</a></li>
+    </ul>
+    <a href="dashboard/dashboard.html" class="user-info">
+      <span class="user-name">Loading...</span>
+    </a>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <!-- Mobile Search -->
+    <div class="mobile-search-container">
+      <input type="text" placeholder="Search ..." id="mobile-search-input">
+      <span class="clear-search">×</span>
+    </div>
+    
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li><a href="community.html">COMMUNITY</a></li>
+        <li><a href="resources.html" class="active">RESOURCES</a></li>
+        <li><a href="contacts.html">CONTACTS</a></li>
+      </ul>
+    </nav>
+    <a href="dashboard/dashboard.html" class="mobile-user-info">
+      <span class="mobile-user-name">Loading...</span>
+    </a>
+  </div>
+</div>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main class="resources-content">
+  <!-- Main Title -->
+  <h1>RESOURCES</h1>
+
+  <!-- INTRO SECTION -->
+  <section class="intro-section">
+    <h2>Your Guide to Better Mental Well-Being</h2>
+    <p>
+      The Resources section is your go-to hub for valuable mental health 
+      information, self-care strategies, and expert insights. Whether you're 
+      looking for practical tips to manage stress, guided mindfulness exercises, 
+      or in-depth articles on emotional wellness, we've got you covered.
+    </p>
+    <p>
+      Here, you'll find a collection of tools and knowledge designed to empower 
+      you on your mental health journey. Take charge of your well-being with 
+      trusted resources that help you build resilience, find balance, and 
+      embrace self-care.
+    </p>
+  </section>
+
+  <!-- WHAT YOU'LL FIND -->
+  <section class="what-youll-find">
+    <h2>What You'll Find in the Resources Section</h2>
+    <ol>
+      <li><strong>Articles &amp; Guides</strong> – Read expert-written content on mental wellness, stress management, and self-care techniques.</li>
+      <li><strong>Audio &amp; Video Resources</strong> – Access guided meditations, breathing exercises, and mental health talks.</li>
+      <li><strong>Self-Help Worksheets</strong> – Download journaling prompts, goal-setting sheets, and mindfulness activities.</li>
+      <li><strong>Tips &amp; Strategies</strong> – Get actionable advice on managing anxiety, building healthy habits, and improving emotional resilience.</li>
+      <li><strong>Recommended Books &amp; Podcasts</strong> – Explore trusted books and podcasts on mental health and well-being.</li>
+      <li><strong>Crisis Helplines &amp; Support Services</strong> – Find immediate help with a list of professional support organizations.</li>
+    </ol>
+  </section>
+
+  <!-- HOW TO USE -->
+  <section class="how-to-use">
+    <h2>How to Use the Resources Section</h2>
+    <ul>
+      <li>🔹 <strong>Browse Topics</strong> – Choose from different mental health categories like stress relief, emotional wellness, or mindfulness.</li>
+      <li>🔹 <strong>Download &amp; Save</strong> – Save helpful guides or worksheets for future use.</li>
+      <li>🔹 <strong>Watch &amp; Listen</strong> – Engage with videos, audio exercises, and expert talks.</li>
+      <li>🔹 <strong>Share with Others</strong> – Spread awareness by sharing helpful resources with friends or loved ones.</li>
+    </ul>
+  </section>
+
+  <!-- ARTICLES & GUIDES -->
+  <section class="articles-guides">
+    <h2>Articles &amp; Guides</h2>
+    <div class="articles-grid">
+      <!-- 1. WHO -->
+      <div class="article-card">
+        <a href="https://www.who.int/news-room/fact-sheets/detail/mental-disorders" class="card-image">
+          <img src="../images/who.jpeg" alt="World Health Organization (WHO)">
+        </a>
+        <h3>World Health Organization (WHO)</h3>
+        <p>A comprehensive guide on what mental health is, why it matters, and how to maintain it.</p>
+      </div>
+
+      <!-- 2. Psychology Today -->
+      <div class="article-card">
+        <a href="https://www.psychologytoday.com/us/blog/a-deeper-wellness/202302/understanding-the-mental-health-and-self-care-connection" class="card-image">
+          <img src="../images/selfcare.png" alt="Psychology Today">
+        </a>
+        <h3>Psychology Today</h3>
+        <p>Explores the role of self-care in improving mental well-being and reducing stress.</p>
+      </div>
+
+      <!-- 3. Harvard Health -->
+      <div class="article-card">
+        <a href="https://www.health.harvard.edu/mind-and-mood/six-relaxation-techniques-to-reduce-stress" class="card-image">
+          <img src="../images/harvardhealth.jpeg" alt="Harvard Health">
+        </a>
+        <h3>Harvard Health</h3>
+        <p>This article presents six effective relaxation techniques to help alleviate stress and anxiety.</p>
+      </div>
+
+      <!-- 4. NIMH -->
+      <div class="article-card">
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3679190/" class="card-image">
+          <img src="../images/nationalinstitute.jpeg" alt="National Institute of Mental Health">
+        </a>
+        <h3>National Institute of Mental Health</h3>
+        <p>Explains how mindfulness can reduce stress, improve focus, and support emotional regulation.</p>
+      </div>
+
+      <!-- 5. Mayo Clinic -->
+      <div class="article-card">
+        <a href="https://www.mayoclinic.org/diseases-conditions/depression" class="card-image">
+          <img src="../images/mayoclinic.jpeg" alt="Mayo Clinic">
+        </a>
+        <h3>Mayo Clinic</h3>
+        <p>Learn how to recognize and manage depression through self-help strategies and professional support.</p>
+      </div>
+
+      <!-- 6. Mental Health Foundation -->
+      <div class="article-card">
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7322666/" class="card-image">
+          <img src="../images/mentalhealthfoundation.png" alt="Mental Health Foundation">
+        </a>
+        <h3>Mental Health Foundation</h3>
+        <p>Discusses how food choices impact mood and mental well-being.</p>
+      </div>
+
+      <!-- 7. Verywell Mind -->
+      <div class="article-card">
+        <a href="https://www.verywellmind.com/the-benefits-of-journaling-for-stress-management-3144611" class="card-image">
+          <img src="../images/verywellmind.png" alt="Verywell Mind">
+        </a>
+        <h3>Verywell Mind</h3>
+        <p>How writing can help manage stress, process emotions, and improve mental health.</p>
+      </div>
+
+      <!-- 8. APA -->
+      <div class="article-card">
+        <a href="https://www.apa.org/monitor/2022/01/special-burnout-stress" class="card-image">
+          <img src="../images/american.jpeg" alt="American Psychological Association">
+        </a>
+        <h3>American Psychological Association</h3>
+        <p>Covers symptoms of burnout and how to recover from mental exhaustion.</p>
+      </div>
+
+      <!-- 9. Greater Good Science Center -->
+      <div class="article-card">
+        <a href="https://greatergood.berkeley.edu/" class="card-image">
+          <img src="../images/greatergood.png" alt="Greater Good Science Center">
+        </a>
+        <h3>Greater Good Science Center</h3>
+        <p>A research-backed guide on what truly makes people happy and mentally resilient.</p>
+      </div>
+
+      <!-- 10. The Guardian -->
+      <div class="article-card">
+        <a href="https://www.theguardian.com/media/2023/apr/28/social-media-mental-health-gen-z" class="card-image">
+          <img src="../images/guardian.png" alt="The Guardian">
+        </a>
+        <h3>The Guardian</h3>
+        <p>Examines the impact of digital spaces on mental well-being.</p>
+      </div>
+
+      <!-- 11. Sleep Foundation -->
+      <div class="article-card">
+        <a href="https://www.sleepfoundation.org/sleep-deprivation" class="card-image">
+          <img src="../images/sleep.jpeg" alt="Sleep Foundation">
+        </a>
+        <h3>Sleep Foundation</h3>
+        <p>Explains how sleep deprivation affects mental health and how to improve sleep quality.</p>
+      </div>
+
+      <!-- 12. HelpGuide -->
+      <div class="article-card">
+        <a href="https://www.helpguide.org/mental-health/grief/coping-with-grief-and-loss" class="card-image">
+          <img src="../images/helpguide.jpeg" alt="HelpGuide">
+        </a>
+        <h3>HelpGuide</h3>
+        <p>Provides compassionate guidance for coping with loss and emotional pain.</p>
+      </div>
+    </div>
+
+    <button class="learn-more-btn">Learn More Articles</button>
+  </section>
+
+  <!-- VIDEOS & WEBINARS -->
+  <section class="videos-webinars">
+    <h2>Videos &amp; Webinars – Learn Through Visual Content</h2>
+    <p>Immerse yourself in video-based insights and webinars designed to guide you on your mental health journey. Click on any video's image or title to learn more.</p>
+    
+    <div class="video-grid">
+      <!-- 1. Understanding Depression -->
+      <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=9UFkggs5PDI" class="video-image">
+          <img src="../images/understanding depression.jpeg" alt="Understanding Depression"/>
+        </a>
+        <h3>
+          <a href="https://www.youtube.com/watch?v=9UFkggs5PDI">
+            Understanding Depression
+          </a>
+        </h3>
+        <p>Dr. Mehta is an Indian psychologist, YouTuber, and mental health advocate known for her work in promoting awareness around mental health issues.</p>
+      </div>
+
+      <!-- 2. Managing Stress at Work -->
+      <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=ETGt15Mv8uc" class="video-image">
+          <img src="../images/managestress.jpeg" alt="Managing Stress at Work"/>
+        </a>
+        <h3>
+          <a href="https://www.youtube.com/watch?v=ETGt15Mv8uc">
+            Managing Stress at Work
+          </a>
+        </h3>
+        <p>Dr. Prakash is an American psychologist and professor at Ohio State University, specializing in neuroplasticity and neurological disorders</p>
+      </div>
+
+      <!-- 3. The Power of Positive Thinking -->
+      <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=5f82e41Jtwk" class="video-image">
+          <img src="../images/power of positive.png" alt="The Power of Positive Thinking"/>
+        </a>
+        <h3>
+          <a href="https://www.youtube.com/watch?v=5f82e41Jtwk">
+            The Power of Positive Thinking
+          </a>
+        </h3>
+        <p>Chrissy B is an English journalist, author, and television presenter known for hosting "The Chrissy B Show," focusing on mental health.</p>
+      </div>
+
+      <!-- 4. Mental Health & Social Media -->
+      <div class="video-card">
+        <a href="https://www.youtube.com/watch?v=3TNDgBTxyxM" class="video-image">
+          <img src="../images/mentalhealth.jpeg" alt="Mental Health & Social Media"/>
+        </a>
+        <h3>
+          <a href="https://www.youtube.com/watch?v=3TNDgBTxyxM">
+            Mental Health &amp; Social Media
+          </a>
+        </h3>
+        <p>Clinical psychologist and author of <em>Why Has Nobody Told Me This Before?</em></p>
+      </div>
+    </div>
+
+    <p><strong>Dr. Neha Mehta</strong> | <strong>Dr. Ruchika Prakash</strong> | <strong>Chrissy Boodram</strong> | <strong>Dr. Julie Smith</strong></p>
+  </section>
+
+  <!-- AUDIO & PODCASTS -->
+  <section class="audio-podcasts">
+    <h2>Audio &amp; Podcasts – Listen &amp; Learn</h2>
+    <p>
+      Immerse yourself in guided meditations, expert discussions, and 
+      self-care audio sessions designed to help you relax, refocus, 
+      and strengthen your mental well-being.
+    </p>
+    
+    <div class="audio-grid">
+      <!-- 1. Daily Mindfulness Meditation -->
+      <div class="audio-card">
+        <h3>
+          <a href="https://www.youtube.com/watch?v=9gErDK1HUk0">
+            Daily Mindfulness Meditation
+          </a>
+        </h3>
+        <p>A 10-minute guided meditation to start your day with calmness.</p>
+        <p class="byline">By Dr. Tara Brach</p>
+      </div>
+
+      <!-- 2. Breathing Exercises for Anxiety -->
+      <div class="audio-card">
+        <h3>
+          <a href="https://www.youtube.com/watch?v=odADwWzHR24">
+            Breathing Exercises for Anxiety
+          </a>
+        </h3>
+        <p>Learn simple breathing techniques to relieve stress.</p>
+        <p class="byline">By Dr. Andrew Huberman</p>
+      </div>
+
+      <!-- 3. The Science of Happiness Podcast -->
+      <div class="audio-card">
+        <h3>
+          <a href="https://greatergood.berkeley.edu/podcasts/series/the_science_of_happiness">
+            The Science of Happiness Podcast
+          </a>
+        </h3>
+        <p>Practical tips and research-backed insights on what makes us happy.</p>
+        <p class="byline">By Dr. Dacher Keltner</p>
+      </div>
+
+      <!-- 4. How to Sleep Better -->
+      <div class="audio-card">
+        <h3>
+          <a href="https://www.youtube.com/watch?v=lRp5AC9W_F8">
+            How to Sleep Better
+          </a>
+        </h3>
+        <p>A sleep expert's guide to improving rest for better mental health.</p>
+        <p class="byline">By Dr. Matthew Walker</p>
+      </div>
+
+      <!-- 5. Coping with Grief & Loss -->
+      <div class="audio-card">
+        <h3>
+          <a href="https://www.juliasamuel.co.uk/">
+            Coping with Grief &amp; Loss
+          </a>
+        </h3>
+        <p>Emotional support and strategies for processing grief.</p>
+        <p class="byline">By Julia Samuel, Psychotherapist</p>
+      </div>
+
+      <!-- 6. Overcoming Negative Thoughts -->
+      <div class="audio-card">
+        <h3>
+          <a href="https://www.linkedin.com/posts/drjuliesmith_here-are-a-few-tips-on-how-to-deal-with-negative-activity-6999347596498468865-db20/">
+            Overcoming Negative Thoughts
+          </a>
+        </h3>
+        <p>Techniques to shift negative thinking patterns into positive habits</p>
+        <p class="byline">By Dr. Julie Smith</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELF-HELP TOOLS & WORKSHEETS -->
+  <section class="self-help-tools">
+    <h2>Self-Help Tools &amp; Worksheets – Take Charge of Your Mental Well-Being</h2>
+    <p>
+      Empower yourself with interactive tools, worksheets, and exercises 
+      designed to help you track progress, set goals, and build healthy 
+      habits. These self-guided resources are perfect for anyone looking 
+      to develop emotional resilience, practice mindfulness, and enhance 
+      self-care routines.
+    </p>
+    <h3>Featured Self-Help Tools</h3>
+    <ol>
+      <li><strong>Journaling for Mental Clarity–</strong> Daily prompts to reflect and release emotions. (Printable &amp; Digital Template)</li>
+      <li><strong>Self-Care Checklist</strong> – A step-by-step guide to developing a sustainable self-care routine.</li>
+      <li><strong>Stress Management Plan</strong> – Identify stress triggers and create personalized coping strategies.</li>
+      <li><strong>Gratitude Journal</strong> – Practice daily gratitude to boost positivity and emotional resilience.</li>
+      <li><strong>Mindfulness Tracker</strong> – Stay present by logging daily mindfulness and relaxation activities.</li>
+      <li><strong>Goal-Setting &amp; Habit Tracker</strong> – Build healthier routines by setting achievable mental wellness goals.</li>
+    </ol>
+  </section>
+
+  <!-- CRISIS HELPLINES -->
+  <section class="crisis-helplines">
+    <h2>Crisis Helplines &amp; Support Services – Get Immediate Help</h2>
+    <p>
+      If you or someone you know is struggling with mental health challenges, help is available. 
+      Below are trusted helplines and professional support services that provide confidential, 24/7 assistance.
+    </p>
+    <h3>Emergency Helplines by Region</h3>
+    <p><strong>Global Support:</strong> Befrienders Worldwide – Find crisis helplines in your country.<br>
+    Suicide Prevention Lifeline - Free, 24/7 support for people in distress.</p>
+
+    <p><strong>🇺🇸 United States:</strong><br>
+    📞 988 Suicide &amp; Crisis Lifeline – Dial 988 for immediate support.<br>
+    📞 Crisis Text Line – Text HOME to 741741</p>
+
+    <p><strong>🇬🇧 United Kingdom:</strong><br>
+    📞 Samaritans UK – Call 116 123 for free, confidential support.<br>
+    📞 Mind UK – Call 0300 123 3393 for mental health advice.</p>
+
+    <p><strong>🇨🇦 Canada:</strong><br>
+    📞 Talk Suicide Canada – Call 1-833-456-4566 (Available 24/7).<br>
+    📞 Hope for Wellness – Call 1-855-242-3310 for Indigenous support.</p>
+
+    <p><strong>🇦🇺 Australia:</strong><br>
+    📞 Lifeline Australia – Call 13 11 14 for crisis support.<br>
+    📞 Beyond Blue – Call 1300 22 4636 for anxiety and depression support.</p>
+
+    <p><strong>🇮🇳 India:</strong><br>
+    📞 Vandrevala Foundation Helpline – Call 1860 266 2345 for mental health support.<br>
+    📞 iCall for Mental Health – Call +91 9152987821 for emotional support.</p>
+
+    <p><strong>🌍 More Countries?</strong> – Find A Helpline</p>
+  </section>
+
+  <!-- ADDITIONAL RESOURCES -->
+  <section class="additional-resources">
+    <h2>Additional Mental Health Resources</h2>
+    <p>Mental Health First Aid – Learn how to support yourself or someone in crisis.</p>
+    <p>National Alliance on Mental Illness - Education, advocacy, and support.</p>
+    <p class="note">You are not alone. Reach out for help today.</p>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <div class="footer-item">
+      <span>Stay Connected</span>
+      <img src="../images/github-icon (1).png" alt="GitHub">
+    </div>
+    <div class="footer-item">
+      <span>Q &amp; A</span>
+      <img src="../images/qa-icon.png" alt="Q & A">
+    </div>
+    <div class="footer-item">
+      <span>Contact Us</span>
+      <img src="../images/contact-icon.png" alt="Contact">
+    </div>
+  </div>
+  <hr>
+  <p>Copyright © 2025. All rights reserved</p>
+  <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // ======================
+    // USER NAME DISPLAY
+    // ======================
+    const userInfo = document.querySelector('.user-info');
+    const userNameElement = document.querySelector('.user-name');
+    const mobileUserInfo = document.querySelector('.mobile-user-info');
+    const mobileUserNameElement = document.querySelector('.mobile-user-name');
+    
+    // Check localStorage for user data
+    const userData = localStorage.getItem('user');
+    
+    function updateUserDisplay() {
+      if (userData) {
+        try {
+          const user = JSON.parse(userData);
+          const displayName = user.first_name;
+          if (userNameElement) userNameElement.textContent = displayName;
+          if (mobileUserNameElement) mobileUserNameElement.textContent = displayName;
+          
+          // Update links
+          if (userInfo) userInfo.href = 'dashboard/dashboard.html';
+          if (mobileUserInfo) mobileUserInfo.href = 'dashboard/dashboard.html';
+        } catch (e) {
+          console.error('Error parsing user data:', e);
+          const fallback = 'Account';
+          if (userNameElement) userNameElement.textContent = fallback;
+          if (mobileUserNameElement) mobileUserNameElement.textContent = fallback;
+        }
+      } else {
+        const loginText = 'Login';
+        if (userNameElement) userNameElement.textContent = loginText;
+        if (mobileUserNameElement) mobileUserNameElement.textContent = loginText;
+        
+        // Update links
+        if (userInfo) userInfo.href = 'login/login.html';
+        if (mobileUserInfo) mobileUserInfo.href = 'login/login.html';
+      }
+    }
+    
+    updateUserDisplay();
+
+    // ======================
+    // MOBILE MENU TOGGLE
+    // ======================
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+        
+        const lines = this.querySelectorAll('.line');
+        if (this.classList.contains('active')) {
+          lines[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+          lines[1].style.opacity = '0';
+          lines[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+        } else {
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        if (mobileMenu.classList.contains('active') && 
+            !e.target.closest('.mobile-menu') && 
+            !e.target.closest('.hamburger')) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          body.classList.remove('no-scroll');
+          
+          const lines = hamburger.querySelectorAll('.line');
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+      mobileMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+
+    // ======================
+    // DESKTOP SEARCH FUNCTIONALITY
+    // ======================
+    const desktopSearchInput = document.getElementById('desktop-search-input');
+    const desktopSearchContainer = document.querySelector('.desktop-search');
+    
+    if (desktopSearchInput && desktopSearchContainer) {
+      // Update placeholder
+      desktopSearchInput.placeholder = 'Search';
+      
+      // Create clear search button
+      const desktopClearSearch = desktopSearchContainer.querySelector('.clear-search');
+      
+      // Search on input
+      desktopSearchInput.addEventListener('input', function() {
+        desktopClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+      
+      // Clear search functionality
+      desktopClearSearch.addEventListener('click', function() {
+        desktopSearchInput.value = '';
+        desktopClearSearch.style.display = 'none';
+        desktopSearchInput.focus();
+      });
+    }
+
+    // ======================
+    // MOBILE SEARCH FUNCTIONALITY
+    // ======================
+    const mobileSearchInput = document.getElementById('mobile-search-input');
+    const mobileSearchContainer = document.querySelector('.mobile-search-container');
+    
+    if (mobileSearchInput && mobileSearchContainer) {
+      // Update placeholder
+      mobileSearchInput.placeholder = 'Search';
+      
+      // Create clear search button
+      const mobileClearSearch = mobileSearchContainer.querySelector('.clear-search');
+      
+      // Search on input
+      mobileSearchInput.addEventListener('input', function() {
+        mobileClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+      
+      // Clear search functionality
+      mobileClearSearch.addEventListener('click', function() {
+        mobileSearchInput.value = '';
+        mobileClearSearch.style.display = 'none';
+        mobileSearchInput.focus();
+      });
+    }
+  });
+</script>
+</body>
+</html>
