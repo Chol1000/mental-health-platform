@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacts - Mental Health Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="contacts.css">
+  <style>
+    .highlight {
+      background-color: #FFD700;
+      font-weight: bold;
+    }
+    .desktop-search, .mobile-search-container {
+      position: relative;
+    }
+    .clear-search {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #999;
+    }
+    /* Active link styling */
+    .main-nav .active,
+    .mobile-nav .active {
+      color: #FFD700;
+      font-weight: bold;
+    }
+    /* FAQ link styling */
+    .faq-link {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 8px 16px;
+      background-color: #086D2B;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
+    .faq-link:hover {
+      background-color: #054d1c;
+    }
+  </style>
+</head>
+<body>
+<!-- TOP BAR (Logo & Search) -->
+<header class="top-bar">
+  <div class="logo">
+    <img src="../images/logo.png" alt="MHP Logo">
+  </div>
+  <!-- Desktop Search -->
+  <div class="desktop-search">
+    <input type="text" placeholder="Search website..." id="desktop-search-input">
+    <span class="clear-search">×</span>
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</header>
+
+<!-- DESKTOP NAV BAR -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <ul>
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="aboutus.html">ABOUT US</a></li>
+      <li><a href="community.html">COMMUNITY</a></li>
+      <li><a href="resources.html">RESOURCES</a></li>
+      <li><a href="#" class="active">CONTACTS</a></li>
+    </ul>
+    <a href="../dashboard/dashboard.html" class="user-info">
+      <span class="user-name">Loading...</span>
+    </a>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <!-- Mobile Search -->
+    <div class="mobile-search-container">
+      <input type="text" placeholder="Search ..." id="mobile-search-input">
+      <span class="clear-search">×</span>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li><a href="community.html">COMMUNITY</a></li>
+        <li><a href="resources.html">RESOURCES</a></li>
+        <li><a href="#" class="active">CONTACTS</a></li>
+      </ul>
+    </nav>
+    <a href="../dashboard/dashboard.html" class="mobile-user-info">
+      <span class="mobile-user-name">Loading...</span>
+    </a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="contacts-content">
+  <h1>CONTACTS</h1>
+
+  <section class="intro-section">
+    <h2>Contact Us – We're Here to Help</h2>
+    <p>
+      Whether you have questions, feedback, or need support, we're here for you! 
+      Our team is dedicated to ensuring that you have the best experience on our 
+      platform. Feel free to reach out—we'd love to hear from you!
+    </p>
+  </section>
+
+  <section class="how-to-section">
+    <h2>How to Get in Touch</h2>
+
+    <!-- Email Support -->
+    <div class="contact-subsection">
+      <h3>Email Support</h3>
+      <p><em>Have a question or need assistance? Email us at:</em></p>
+      <ul class="email-list">
+        <li>a. a.garang@alustudent.com</li>
+        <li>b. r.mika@alustudent.com</li>
+        <li>c. k.mahad@alustudent.com</li>
+        <li>d. c.monykuch@alustudent.com</li>
+      </ul>
+    </div>
+
+    <!-- Social Media -->
+    <div class="contact-subsection">
+      <h3>Connect With Us on Social Media</h3>
+      <div class="social-grid">
+        <!-- Abraham -->
+        <div class="social-card">
+          <div class="name-box">Abraham Chan Deng</div>
+          <div class="icon-box">
+            <img src="download__1_-removebg-preview.png" alt="LinkedIn">
+          </div>
+        </div>
+        <!-- Mika -->
+        <div class="social-card">
+          <div class="name-box">Rurangwa Mika</div>
+          <div class="icon-box">
+            <img src="download__1_-removebg-preview.png" alt="LinkedIn">
+          </div>
+        </div>
+        <!-- Mahad -->
+        <div class="social-card">
+          <div class="name-box">Kakooza Mahad</div>
+          <div class="icon-box">
+            <img src="download__1_-removebg-preview.png" alt="LinkedIn">
+          </div>
+        </div>
+        <!-- Chol Atem -->
+        <div class="social-card">
+          <div class="name-box">Chol Atem Giet Monykuch</div>
+          <div class="icon-box">
+            <img src="download__1_-removebg-preview.png" alt="LinkedIn">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="contact-subsection">
+      <h3>Visit Our FAQ Section</h3>
+      <p>
+        Before reaching out, check our FAQ section for quick answers 
+        to common questions.
+      </p>
+      <a href="faq.html" class="faq-link">Go to FAQ</a>
+    </div>
+  </section>
+
+  <section class="stay-tuned">
+    <h2>Stay Tuned</h2>
+    <p>
+      We are currently working on setting up our official social media pages 
+      to keep you updated with mental health tips, community discussions, 
+      and platform updates. Stay tuned!
+    </p>
+    <p>
+      In the meantime, feel free to reach out to us via email or other available 
+      platforms for any inquiries or support. We appreciate your patience and 
+      will update you once our social pages are live!
+    </p>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <div class="footer-item">
+      <span>Stay Connected</span>
+      <img src="../images/github-icon (1).png" alt="GitHub">
+    </div>
+    <div class="footer-item">
+      <span>Q & A</span>
+      <img src="../images/qa-icon.png" alt="Q & A">
+    </div>
+    <div class="footer-item">
+      <span>Contact Us</span>
+      <img src="../images/contact-icon.png" alt="Contact">
+    </div>
+  </div>
+  <hr>
+  <p>Copyright © 2025. All rights reserved</p>
+  <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // ======================
+    // USER NAME DISPLAY
+    // ======================
+    const userInfo = document.querySelector('.user-info');
+    const userNameElement = document.querySelector('.user-name');
+    const mobileUserInfo = document.querySelector('.mobile-user-info');
+    const mobileUserNameElement = document.querySelector('.mobile-user-name');
+    
+    // Check localStorage for user data
+    const userData = localStorage.getItem('user');
+    
+    function updateUserDisplay() {
+      if (userData) {
+        try {
+          const user = JSON.parse(userData);
+          const displayName = user.first_name;
+          if (userNameElement) userNameElement.textContent = displayName;
+          if (mobileUserNameElement) mobileUserNameElement.textContent = displayName;
+          
+          // Update links
+          if (userInfo) userInfo.href = '../login/dashboard/dashboard.html';
+          if (mobileUserInfo) mobileUserInfo.href = '../login/dashboard/dashboard.html';
+        } catch (e) {
+          console.error('Error parsing user data:', e);
+          const fallback = 'Account';
+          if (userNameElement) userNameElement.textContent = fallback;
+          if (mobileUserNameElement) mobileUserNameElement.textContent = fallback;
+        }
+      } else {
+        const loginText = 'Login';
+        if (userNameElement) userNameElement.textContent = loginText;
+        if (mobileUserNameElement) mobileUserNameElement.textContent = loginText;
+        
+        // Update links
+        if (userInfo) userInfo.href = '../login/login.html';
+        if (mobileUserInfo) mobileUserInfo.href = '../login/login.html';
+      }
+    }
+    
+    updateUserDisplay();
+
+    // ======================
+    // MOBILE MENU TOGGLE
+    // ======================
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+
+        const lines = this.querySelectorAll('.line');
+        if (this.classList.contains('active')) {
+          lines[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+          lines[1].style.opacity = '0';
+          lines[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+        } else {
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        if (mobileMenu.classList.contains('active') && 
+            !e.target.closest('.mobile-menu') && 
+            !e.target.closest('.hamburger')) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          body.classList.remove('no-scroll');
+          
+          const lines = hamburger.querySelectorAll('.line');
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+      mobileMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+
+    // ======================
+    // SEARCH FUNCTIONALITY
+    // ======================
+    const desktopSearchInput = document.getElementById('desktop-search-input');
+    const desktopSearchContainer = document.querySelector('.desktop-search');
+    
+    if (desktopSearchInput && desktopSearchContainer) {
+      const desktopClearSearch = desktopSearchContainer.querySelector('.clear-search');
+      
+      desktopSearchInput.addEventListener('input', function() {
+        desktopClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+      
+      desktopClearSearch.addEventListener('click', function() {
+        desktopSearchInput.value = '';
+        desktopClearSearch.style.display = 'none';
+        desktopSearchInput.focus();
+      });
+    }
+
+    const mobileSearchInput = document.getElementById('mobile-search-input');
+    const mobileSearchContainer = document.querySelector('.mobile-search-container');
+    
+    if (mobileSearchInput && mobileSearchContainer) {
+      const mobileClearSearch = mobileSearchContainer.querySelector('.clear-search');
+      
+      mobileSearchInput.addEventListener('input', function() {
+        mobileClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+      
+      mobileClearSearch.addEventListener('click', function() {
+        mobileSearchInput.value = '';
+        mobileClearSearch.style.display = 'none';
+        mobileSearchInput.focus();
+      });
+    }
+  });
+</script>
+</body>
+</html>
