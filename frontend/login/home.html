@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feelings Menu - Mental Health Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="header.css"/>
+  <link rel="stylesheet" href="footer.css"/>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    .highlight {
+      background-color: #FFD700;
+      font-weight: bold;
+    }
+    .desktop-search, .mobile-search-container {
+      position: relative;
+    }
+    .clear-search {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #999;
+    }
+    /* Active link styling */
+    .main-nav .active,
+    .mobile-nav .active {
+      color: #FFD700;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR (Logo & Search) -->
+<header class="top-bar">
+  <div class="logo">
+    <img src="../images/logo.png" alt="MHP Logo">
+  </div>
+  
+  <!-- Desktop Search -->
+  <div class="desktop-search">
+    <input type="text" placeholder="Search website..." id="desktop-search-input">
+    <span class="clear-search">×</span>
+  </div>
+  
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</header>
+
+<!-- DESKTOP NAV BAR -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <ul>
+      <li><a href="#" class="active">HOME</a></li>
+      <li><a href="aboutus.html">ABOUT US</a></li>
+      <li><a href="community.html">COMMUNITY</a></li>
+      <li><a href="resources.html">RESOURCES</a></li>
+      <li><a href="contacts.html">CONTACTS</a></li>
+    </ul>
+    <a href="dashboard/dashboard.html" class="user-info">
+      <span class="user-name">Loading...</span>
+    </a>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <!-- Mobile Search -->
+    <div class="mobile-search-container">
+      <input type="text" placeholder="Search website..." id="mobile-search-input">
+      <span class="clear-search">×</span>
+    </div>
+    
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="#" class="active">HOME</a></li>
+        <li><a href="aboutus.html">ABOUT US</a></li>
+        <li><a href="community.html">COMMUNITY</a></li>
+        <li><a href="resources.html">RESOURCES</a></li>
+        <li><a href="contacts.html">CONTACTS</a></li>
+      </ul>
+    </nav>
+    <a href="dashboard/dashboard.html" class="mobile-user-info">
+      <span class="mobile-user-name">Loading...</span>
+    </a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT: FEELINGS MENU -->
+<main class="feeling-content">
+  <h1 class="feeling-title">FEELINGS MENU</h1>
+  <h2 class="feeling-subtitle">How Are You Feeling Today?</h2>
+
+  <p class="feeling-intro">
+    Welcome to your personalized well-being space! Take a moment to check in with yourself by 
+    selecting how you're feeling. Based on your choice, we'll provide tailored self-care activities, 
+    helpful resources, and supportive guidance to help you navigate your emotions. Simply select a 
+    card that best represents your current mood, and let us guide you with meaningful insights 
+    and activities designed to support your mental health.
+  </p>
+
+  <!-- Search bar -->
+  <div class="search-feeling">
+    <input type="text" placeholder="Search Feeling" id="feeling-search">
+    <span class="clear-search">×</span>
+  </div>
+
+  <!-- FEELINGS GRID -->
+  <section class="feelings-grid">
+    <div class="no-results">
+      <p>No feelings match your search. Try a different term.</p>
+    </div>
+    
+    <!-- Feeling cards -->
+    <div class="feeling-card" data-feeling="sad" onclick="window.location.href='activities/sad.html'">
+      <span>Sad</span>
+    </div>
+    <div class="feeling-card" data-feeling="anxious" onclick="window.location.href='activities/anxious.html'">
+      <span>Anxious</span>
+    </div>
+    <div class="feeling-card" data-feeling="stressed" onclick="window.location.href='activities/stressed.html'">
+      <span>Stressed</span>
+    </div>
+    <div class="feeling-card" data-feeling="annoyed" onclick="window.location.href='activities/annoy.html'">
+      <span>Annoyed</span>
+    </div>
+    <div class="feeling-card" data-feeling="snubbed" onclick="window.location.href='activities/snubbed.html'">
+      <span>Snubbed</span>
+    </div>
+    <div class="feeling-card" data-feeling="tired" onclick="window.location.href='activities/tired.html'">
+      <span>Tired</span>
+    </div>
+    <div class="feeling-card" data-feeling="exhausted" onclick="window.location.href='activities/exhausted.html'">
+      <span>Exhausted</span>
+    </div>
+    <div class="feeling-card" data-feeling="angry" onclick="window.location.href='activities/angry.html'">
+      <span>Angry</span>
+    </div>
+    <div class="feeling-card" data-feeling="hopeless" onclick="window.location.href='activities/hopeless.html'">
+      <span>Hopeless</span>
+    </div>
+    <div class="feeling-card" data-feeling="insecure" onclick="window.location.href='activities/insecure.html'">
+      <span>Insecure</span>
+    </div>
+    <div class="feeling-card" data-feeling="fearful" onclick="window.location.href='activities/fearful.html'">
+      <span>Fearful</span>
+    </div>
+    <div class="feeling-card" data-feeling="regretful" onclick="window.location.href='activities/regretful.html'">
+      <span>Regretful</span>
+    </div>
+    <div class="feeling-card" data-feeling="grieving" onclick="window.location.href='activities/grieving.html'">
+      <span>Grieving</span>
+    </div>
+    <div class="feeling-card" data-feeling="self-doubt" onclick="window.location.href='activities/self-doubt.html'">
+      <span>Self-Doubt</span>
+    </div>
+    <div class="feeling-card" data-feeling="lonely" onclick="window.location.href='activities/lonely.html'">
+      <span>Lonely</span>
+    </div>
+    <div class="feeling-card" data-feeling="ashamed" onclick="window.location.href='activities/ashamed.html'">
+      <span>Ashamed</span>
+    </div>
+    <div class="feeling-card" data-feeling="bitter" onclick="window.location.href='activities/bitter.html'">
+      <span>Bitter</span>
+    </div>
+    <div class="feeling-card" data-feeling="let down" onclick="window.location.href='activities/let-down.html'">
+      <span>Let Down</span>
+    </div>
+    <div class="feeling-card" data-feeling="confused" onclick="window.location.href='activities/confused.html'">
+      <span>Confused</span>
+    </div>
+    <div class="feeling-card" data-feeling="curious" onclick="window.location.href='activities/curious.html'">
+      <span>Curious</span>
+    </div>
+    <div class="feeling-card" data-feeling="numb" onclick="window.location.href='activities/numb.html'">
+      <span>Numb</span>
+    </div>
+    <div class="feeling-card" data-feeling="lost" onclick="window.location.href='activities/lost.html'">
+      <span>Lost</span>
+    </div>
+    <div class="feeling-card" data-feeling="distracted" onclick="window.location.href='activities/distracted.html'">
+      <span>Distracted</span>
+    </div>
+    <div class="feeling-card" data-feeling="impatient" onclick="window.location.href='activities/impatient.html'">
+      <span>Impatient</span>
+    </div>
+    <div class="feeling-card" data-feeling="neutral" onclick="window.location.href='activities/neutral.html'">
+      <span>Neutral</span>
+    </div>
+    <div class="feeling-card" data-feeling="social" onclick="window.location.href='activities/social.html'">
+      <span>Social</span>
+    </div>
+    <div class="feeling-card" data-feeling="inspired" onclick="window.location.href='activities/inspired.html'">
+      <span>Inspired</span>
+    </div>
+    <div class="feeling-card" data-feeling="silly" onclick="window.location.href='activities/silly.html'">
+      <span>Silly</span>
+    </div>
+    <div class="feeling-card" data-feeling="relaxed" onclick="window.location.href='activities/relaxed.html'">
+      <span>Relaxed</span>
+    </div>
+    <div class="feeling-card" data-feeling="proud" onclick="window.location.href='activities/proud.html'">
+      <span>Proud</span>
+    </div>
+    <div class="feeling-card" data-feeling="hopeful" onclick="window.location.href='activities/hopeful.html'">
+      <span>Hopeful</span>
+    </div>
+    <div class="feeling-card" data-feeling="grateful" onclick="window.location.href='activities/grateful.html'">
+      <span>Grateful</span>
+    </div>
+    <div class="feeling-card" data-feeling="motivated" onclick="window.location.href='activities/motivated.html'">
+      <span>Motivated</span>
+    </div>
+    <div class="feeling-card" data-feeling="loved" onclick="window.location.href='activities/loved.html'">
+      <span>Loved</span>
+    </div>
+    <div class="feeling-card" data-feeling="excited" onclick="window.location.href='activities/excited.html'">
+      <span>Excited</span>
+    </div>
+    <div class="feeling-card" data-feeling="happy" onclick="window.location.href='activities/happy.html'">
+      <span>Happy</span>
+    </div>
+    <div class="feeling-card" data-feeling="helpless" onclick="window.location.href='activities/helpless.html'">
+      <span>Helpless</span>
+    </div>
+    <div class="feeling-card" data-feeling="paranoid" onclick="window.location.href='activities/paranoid.html'">
+      <span>Paranoid</span>
+    </div>
+    <div class="feeling-card" data-feeling="trapped" onclick="window.location.href='activities/trapped.html'">
+      <span>Trapped</span>
+    </div>
+    <div class="feeling-card" data-feeling="disliked" onclick="window.location.href='activities/disliked.html'">
+      <span>Disliked</span>
+    </div>
+  </section>
+
+  <p class="feeling-extra">
+    Did not find your feeling? Don't worry, we have AI chatbot to help you out
+    <br>
+    <a href="../login/activities/unsure.html" class="click-here">Click Here</a>
+  </p>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <div class="footer-item">
+      <span>Stay Connected</span>
+      <img src="../images/github-icon (1).png" alt="GitHub">
+    </div>
+    <div class="footer-item">
+      <span>Q &amp; A</span>
+      <img src="../images/qa-icon.png" alt="Q & A">
+    </div>
+    <div class="footer-item">
+      <span>Contact Us</span>
+      <img src="../images/contact-icon.png" alt="Contact">
+    </div>
+  </div>
+  <hr>
+  <p>Copyright © 2025. All rights reserved</p>
+  <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // ======================
+    // USER NAME DISPLAY
+    // ======================
+    const userInfo = document.querySelector('.user-info');
+    const userNameElement = document.querySelector('.user-name');
+    const mobileUserInfo = document.querySelector('.mobile-user-info');
+    const mobileUserNameElement = document.querySelector('.mobile-user-name');
+    
+    // Check localStorage for user data
+    const userData = localStorage.getItem('user');
+    
+    function updateUserDisplay() {
+      if (userData) {
+        try {
+          const user = JSON.parse(userData);
+          const displayName = user.first_name;
+          if (userNameElement) userNameElement.textContent = displayName;
+          if (mobileUserNameElement) mobileUserNameElement.textContent = displayName;
+          
+          // Update links
+          if (userInfo) userInfo.href = 'dashboard/dashboard.html';
+          if (mobileUserInfo) mobileUserInfo.href = 'dashboard/dashboard.html';
+        } catch (e) {
+          console.error('Error parsing user data:', e);
+          const fallback = 'Account';
+          if (userNameElement) userNameElement.textContent = fallback;
+          if (mobileUserNameElement) mobileUserNameElement.textContent = fallback;
+        }
+      } else {
+        const loginText = 'Login';
+        if (userNameElement) userNameElement.textContent = loginText;
+        if (mobileUserNameElement) mobileUserNameElement.textContent = loginText;
+        
+        // Update links
+        if (userInfo) userInfo.href = 'login/login.html';
+        if (mobileUserInfo) mobileUserInfo.href = 'login/login.html';
+      }
+    }
+    
+    updateUserDisplay();
+
+    // ======================
+    // FEELINGS SEARCH
+    // ======================
+    const feelingCards = document.querySelectorAll('.feeling-card');
+    const searchInput = document.getElementById('feeling-search');
+    const clearSearch = document.querySelector('.clear-search');
+    const noResults = document.querySelector('.no-results');
+
+    function highlightMatches(text, searchTerm) {
+      if (!searchTerm) return text;
+      const regex = new RegExp(`(${searchTerm})`, 'gi');
+      return text.replace(regex, '<span class="highlight">$1</span>');
+    }
+
+    function searchFeelings() {
+      const searchTerm = searchInput.value.trim().toLowerCase();
+      let hasResults = false;
+      
+      feelingCards.forEach(card => {
+        const feelingName = card.getAttribute('data-feeling') || 
+                          card.querySelector('span').textContent.toLowerCase();
+        const spanElement = card.querySelector('span');
+        const originalText = spanElement.getAttribute('data-original') || spanElement.textContent;
+        spanElement.setAttribute('data-original', originalText);
+        
+        if (feelingName.includes(searchTerm)) {
+          card.style.display = 'flex';
+          hasResults = true;
+          spanElement.innerHTML = highlightMatches(originalText, searchTerm);
+        } else {
+          card.style.display = 'none';
+          spanElement.textContent = originalText;
+        }
+      });
+      
+      noResults.style.display = hasResults || !searchTerm ? 'none' : 'block';
+      clearSearch.style.display = searchTerm ? 'block' : 'none';
+    }
+    
+    if (searchInput) {
+      searchInput.addEventListener('input', searchFeelings);
+      searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') searchFeelings();
+      });
+    }
+    
+    if (clearSearch) {
+      clearSearch.addEventListener('click', function() {
+        searchInput.value = '';
+        searchFeelings();
+        searchInput.focus();
+      });
+    }
+    
+    if (feelingCards.length) searchFeelings();
+
+    // ======================
+    // MOBILE MENU TOGGLE
+    // ======================
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const body = document.body;
+
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        body.classList.toggle('no-scroll');
+        
+        const lines = this.querySelectorAll('.line');
+        if (this.classList.contains('active')) {
+          lines[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+          lines[1].style.opacity = '0';
+          lines[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+        } else {
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+      document.addEventListener('click', function(e) {
+        if (mobileMenu.classList.contains('active') && 
+            !e.target.closest('.mobile-menu') && 
+            !e.target.closest('.hamburger')) {
+          hamburger.classList.remove('active');
+          mobileMenu.classList.remove('active');
+          body.classList.remove('no-scroll');
+          
+          const lines = hamburger.querySelectorAll('.line');
+          lines[0].style.transform = 'rotate(0) translate(0)';
+          lines[1].style.opacity = '1';
+          lines[2].style.transform = 'rotate(0) translate(0)';
+        }
+      });
+
+      mobileMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+      });
+    }
+
+    // ======================
+    // DESKTOP SEARCH FUNCTIONALITY
+    // ======================
+    const desktopSearchInput = document.getElementById('desktop-search-input');
+    const desktopSearchContainer = document.querySelector('.desktop-search');
+    
+    if (desktopSearchInput && desktopSearchContainer) {
+      // Update placeholder
+      desktopSearchInput.placeholder = 'Search';
+      
+      // Create clear search button
+      const desktopClearSearch = desktopSearchContainer.querySelector('.clear-search');
+      
+      // Search on input
+      desktopSearchInput.addEventListener('input', function() {
+        desktopClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+      
+      // Clear search functionality
+      desktopClearSearch.addEventListener('click', function() {
+        desktopSearchInput.value = '';
+        desktopClearSearch.style.display = 'none';
+        desktopSearchInput.focus();
+      });
+    }
+
+    // ======================
+    // MOBILE SEARCH FUNCTIONALITY
+    // ======================
+    const mobileSearchInput = document.getElementById('mobile-search-input');
+    const mobileSearchContainer = document.querySelector('.mobile-search-container');
+    
+    if (mobileSearchInput && mobileSearchContainer) {
+      // Update placeholder
+      mobileSearchInput.placeholder = 'Search';
+      
+      // Create clear search button
+      const mobileClearSearch = mobileSearchContainer.querySelector('.clear-search');
+      
+      // Search on input
+      mobileSearchInput.addEventListener('input', function() {
+        mobileClearSearch.style.display = this.value ? 'block' : 'none';
+      });
+      
+      // Clear search functionality
+      mobileClearSearch.addEventListener('click', function() {
+        mobileSearchInput.value = '';
+        mobileClearSearch.style.display = 'none';
+        mobileSearchInput.focus();
+      });
+    }
+  });
+</script>
+</body>
+</html>
