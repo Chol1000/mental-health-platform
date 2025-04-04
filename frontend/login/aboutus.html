@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Mental Health Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="footer.css" />
+  <link rel="stylesheet" href="aboutus.css">
+  <style>
+    .highlight {
+      background-color: #FFD700;
+      font-weight: bold;
+    }
+    .desktop-search, .mobile-search-container {
+      position: relative;
+    }
+    .clear-search {
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #999;
+    }
+    /* Active link styling */
+    .main-nav .active,
+    .mobile-nav .active {
+      color: #FFD700;
+      font-weight: bold;
+    }
+  
+  </style>
+</head>
+<body>
+<!-- TOP BAR (Logo & Search) -->
+<header class="top-bar">
+  <div class="logo">
+    <img src="../images/logo.png" alt="MHP Logo">
+  </div>
+  <!-- Desktop Search -->
+  <div class="desktop-search">
+    <input type="text" placeholder="Search website..." id="desktop-search-input">
+    <span class="clear-search">×</span>
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</header>
+<!-- DESKTOP NAV BAR -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <ul>
+      <li><a href="home.html">HOME</a></li>
+      <li><a href="aboutus.html" class="active">ABOUT US</a></li>
+      <li><a href="community.html">COMMUNITY</a></li>
+      <li><a href="resources.html">RESOURCES</a></li>
+      <li><a href="contacts.html">CONTACTS</a></li>
+    </ul>
+    <a href="../dashboard/dashboard.html" class="user-info">
+      <span class="user-name">Loading...</span>
+    </a>
+  </div>
+</nav>
+<!-- MOBILE MENU -->
+<div class="mobile-menu">
+  <div class="mobile-menu-content">
+    <!-- Mobile Search -->
+    <div class="mobile-search-container">
+      <input type="text" placeholder="Search ..." id="mobile-search-input">
+      <span class="clear-search">×</span>
+    </div>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="aboutus.html" class="active">ABOUT US</a></li>
+        <li><a href="community.html">COMMUNITY</a></li>
+        <li><a href="resources.html">RESOURCES</a></li>
+        <li><a href="contacts.html">CONTACTS</a></li>
+      </ul>
+    </nav>
+    <a href="../dashboard/dashboard.html" class="mobile-user-info">
+      <span class="mobile-user-name">Loading...</span>
+    </a>
+  </div>
+</div>
+<!-- MAIN CONTENT -->
+<main class="about-content">
+  <h1>ABOUT US</h1>
+  <section class="intro-section">
+    <h2>Who We Are</h2>
+    <p>
+      Welcome to Mental Health Platform, a platform designed to support
+      mental well-being by providing personalized self-care tools,
+      emotional tracking, and valuable mental health resources. We understand
+      that mental health is just as important as physical health, and our mission
+      is to make mental wellness accessible to everyone, no matter where they are
+      or what challenges they face.
+    </p>
+    <p>
+      Many people struggle with stress, anxiety, and emotional ups and downs but
+      may not have access to professional help due to cost, stigma, or lack of
+      resources. That's where we come in—we offer a safe, non-judgmental space
+      where users can take control of their mental well-being at their own pace.
+    </p>
+  </section>
+  <section class="mission-section">
+    <h2>Our Mission</h2>
+    <p>
+      We believe that mental health support should be available to everyone—
+      without stigma, barriers, or high costs. Our goal is to provide a safe space
+      where individuals can track their emotions, access self-care activities,
+      and find useful mental health resources.
+    </p>
+    <p><strong>We aim to:</strong></p>
+    <ol>
+      <li>Encourage self-awareness through tools like mood tracking and emotional journaling.</li>
+      <li>Provide AI-driven self-care recommendations tailored to individual needs.</li>
+      <li>Foster a supportive community where people can share experiences and support one another.</li>
+      <li>Break the stigma around mental health by offering education and guidance.</li>
+    </ol>
+  </section>
+  <section class="offer-section">
+    <h2>What We Offer</h2>
+    <p>We provide a variety of features to help users maintain a balanced and healthy mind</p>
+    <ol>
+      <li>
+        <strong>Mood Tracking</strong> – Log your emotions daily and identify patterns in your
+        mental well-being.
+      </li>
+      <li>
+        <strong>Personalized Self-Care Activities</strong> – AI-driven recommendations,
+        such as meditation, journaling, and relaxation techniques, tailored to your mood.
+      </li>
+      <li>
+        <strong>Community Support</strong> – A safe space where you can connect with others,
+        share your journey, and find encouragement.
+      </li>
+      <li>
+        <strong>Expert Resources</strong> – Access carefully curated articles, videos, and guides
+        on mental health topics, self-care strategies, and coping mechanisms.
+      </li>
+      <li>
+        <strong>Guided Mindfulness & Wellness Exercises</strong> – Engage in stress-relief
+        activities, guided breathing exercises, and mental relaxation techniques.
+      </li>
+    </ol>
+  </section>
+  <section class="why-section">
+    <h2>Why Choose Us?</h2>
+    <ol>
+      <li>
+        <strong>Completely Free & Accessible</strong> – No hidden fees or subscriptions,
+        ensuring that everyone can access mental health support.
+      </li>
+      <li>
+        <strong>User-Friendly & AI-Powered</strong> – Easy to use with smart recommendations
+        to make self-care effortless.
+      </li>
+      <li>
+        <strong>Private & Secure</strong> – We prioritize your privacy and ensure your data is safe.
+      </li>
+      <li>
+        <strong>A Community that Cares</strong> – You are not alone. Our platform connects
+        you with others who understand and support you.
+      </li>
+    </ol>
+  </section>
+</main>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <div class="footer-item">
+      <span>Stay Connected</span>
+      <img src="../images/github-icon (1).png" alt="GitHub">
+    </div>
+    <div class="footer-item">
+      <span>Q &amp; A</span>
+      <img src="../images/qa-icon.png" alt="Q & A">
+    </div>
+    <div class="footer-item">
+      <span>Contact Us</span>
+      <img src="../images/contact-icon.png" alt="Contact">
+    </div>
+  </div>
+  <hr>
+  <p>Copyright © 2025. All rights reserved</p>
+  <p><a href="#">Terms of Use</a> | <a href="#">Privacy Policy</a></p>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  // ======================
+  // USER NAME DISPLAY
+  // ======================
+  const userInfo = document.querySelector('.user-info');
+  const userNameElement = document.querySelector('.user-name');
+  const mobileUserInfo = document.querySelector('.mobile-user-info');
+  const mobileUserNameElement = document.querySelector('.mobile-user-name');
+  
+  // Check localStorage for user data
+  const userData = localStorage.getItem('user');
+  
+  function updateUserDisplay() {
+    if (userData) {
+      try {
+        const user = JSON.parse(userData);
+        const displayName = user.first_name;
+        if (userNameElement) userNameElement.textContent = displayName;
+        if (mobileUserNameElement) mobileUserNameElement.textContent = displayName;
+        
+        // Update links
+        if (userInfo) userInfo.href = '../login/dashboard/dashboard.html';
+        if (mobileUserInfo) mobileUserInfo.href = '../login/dashboard/dashboard.html';
+      } catch (e) {
+        console.error('Error parsing user data:', e);
+        const fallback = 'Account';
+        if (userNameElement) userNameElement.textContent = fallback;
+        if (mobileUserNameElement) mobileUserNameElement.textContent = fallback;
+      }
+    } else {
+      const loginText = 'Login';
+      if (userNameElement) userNameElement.textContent = loginText;
+      if (mobileUserNameElement) mobileUserNameElement.textContent = loginText;
+      
+      // Update links
+      if (userInfo) userInfo.href = '../login/login.html';
+      if (mobileUserInfo) mobileUserInfo.href = '../login/login.html';
+    }
+  }
+  
+  updateUserDisplay();
+
+  // ======================
+  // MOBILE MENU TOGGLE
+  // ======================
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  const body = document.body;
+
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      body.classList.toggle('no-scroll');
+
+      // Animate hamburger lines
+      const lines = this.querySelectorAll('.line');
+      if (this.classList.contains('active')) {
+        lines[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+        lines[1].style.opacity = '0';
+        lines[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+      } else {
+        lines[0].style.transform = 'rotate(0) translate(0)';
+        lines[1].style.opacity = '1';
+        lines[2].style.transform = 'rotate(0) translate(0)';
+      }
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+      if (mobileMenu.classList.contains('active') && 
+          !e.target.closest('.mobile-menu') && 
+          !e.target.closest('.hamburger')) {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        body.classList.remove('no-scroll');
+        
+        // Reset hamburger lines
+        const lines = hamburger.querySelectorAll('.line');
+        lines[0].style.transform = 'rotate(0) translate(0)';
+        lines[1].style.opacity = '1';
+        lines[2].style.transform = 'rotate(0) translate(0)';
+      }
+    });
+
+    // Prevent clicks inside the mobile menu from closing it
+    mobileMenu.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  }
+
+  // ======================
+  // SEARCH FUNCTIONALITY
+  // ======================
+  // Desktop Search
+  const desktopSearchInput = document.getElementById('desktop-search-input');
+  const desktopSearchContainer = document.querySelector('.desktop-search');
+  
+  if (desktopSearchInput && desktopSearchContainer) {
+    const desktopClearSearch = desktopSearchContainer.querySelector('.clear-search');
+    
+    desktopSearchInput.addEventListener('input', function() {
+      desktopClearSearch.style.display = this.value ? 'block' : 'none';
+    });
+    
+    desktopClearSearch.addEventListener('click', function() {
+      desktopSearchInput.value = '';
+      desktopClearSearch.style.display = 'none';
+      desktopSearchInput.focus();
+    });
+  }
+
+  // Mobile Search
+  const mobileSearchInput = document.getElementById('mobile-search-input');
+  const mobileSearchContainer = document.querySelector('.mobile-search-container');
+  
+  if (mobileSearchInput && mobileSearchContainer) {
+    const mobileClearSearch = mobileSearchContainer.querySelector('.clear-search');
+    
+    mobileSearchInput.addEventListener('input', function() {
+      mobileClearSearch.style.display = this.value ? 'block' : 'none';
+    });
+    
+    mobileClearSearch.addEventListener('click', function() {
+      mobileSearchInput.value = '';
+      mobileClearSearch.style.display = 'none';
+      mobileSearchInput.focus();
+    });
+  }
+});
+</script>
+</body>
+</html>
