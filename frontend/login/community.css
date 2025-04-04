@@ -1,0 +1,425 @@
+/* community.css - Only community-specific styles */
+
+/* MAIN CONTENT */
+.community-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  flex: 1;
+}
+
+/* Headers */
+.community-content h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.community-content h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #086D2B;
+  border-radius: 2px;
+}
+
+.community-content h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 40px 0 20px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.community-content h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  height: 70%;
+  width: 5px;
+  background: #086D2B;
+  border-radius: 3px;
+}
+
+/* Text Elements */
+.community-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Lists */
+.community-list, .why-join-list {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.community-list li {
+  margin-bottom: 1rem;
+  font-size: 18px;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 30px;
+}
+
+.community-list li::before {
+  content: '•';
+  color: #086D2B;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+
+.why-join-list li {
+  margin-bottom: 1rem;
+  font-size: 18px;
+  line-height: 1.6;
+  background: #f8f9fa;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 4px solid #086D2B;
+}
+
+/* Two-column layout for posts */
+.posts-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+/* ================================= */
+/* POST STYLING (Keep your beautiful design) */
+/* ================================= */
+
+/* Create Post Section */
+.post-form-container {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  border-top: 5px solid #086D2B;
+  height: fit-content;
+  position: sticky;
+  top: 120px;
+}
+
+.post-form-container h2 {
+  margin-top: 0;
+  color: #002365;
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.post-form textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 1.2rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-family: 'Gowun Batang', serif;
+  font-size: 16px;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.post-form textarea:focus {
+  outline: none;
+  border-color: #086D2B;
+  box-shadow: 0 0 0 3px rgba(8, 109, 43, 0.1);
+}
+
+.post-form button {
+  background: linear-gradient(135deg, #086D2B, #054d1c);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 28px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.post-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Posts Container */
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.post {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 4px solid #086D2B;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.post-author {
+  font-weight: 700;
+  color: #086D2B;
+  margin-bottom: 0.5rem;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.post-author::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #FFD700;
+  border-radius: 50%;
+}
+
+.post-content {
+  margin: 1.5rem 0;
+  white-space: pre-wrap;
+  font-size: 16px;
+  line-height: 1.8;
+  padding: 0 10px;
+}
+
+.post-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 1.5rem;
+}
+
+.reply-btn, .edit-btn, .delete-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.reply-btn {
+  background: #086D2B;
+  color: white;
+}
+
+.edit-btn {
+  background: #FFC107;
+  color: #2c3e50;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: white;
+}
+
+.reply-btn:hover, .edit-btn:hover, .delete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.replies-container {
+  margin-top: 1.5rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid #e0e0e0;
+}
+
+.reply {
+  padding: 1rem 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.reply:last-child {
+  border-bottom: none;
+}
+
+.reply-author {
+  font-weight: 600;
+  color: #086D2B;
+  font-size: 15px;
+  margin-bottom: 0.3rem;
+}
+
+.reply-content {
+  margin-top: 0.5rem;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #1e88e5; /* Blue color for reply messages */
+}
+
+/* Edit Post Modal */
+.edit-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-modal-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border-top: 5px solid #086D2B;
+}
+
+.edit-modal h2 {
+  margin-top: 0;
+  color: #002365;
+}
+
+.edit-modal textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 1.2rem;
+  margin: 1.5rem 0;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-family: 'Gowun Batang', serif;
+  font-size: 16px;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.edit-modal textarea:focus {
+  outline: none;
+  border-color: #086D2B;
+  box-shadow: 0 0 0 3px rgba(8, 109, 43, 0.1);
+}
+
+.edit-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.edit-modal-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#cancel-edit {
+  background: #f0f0f0;
+  color: #333;
+}
+
+#save-edit {
+  background: linear-gradient(135deg, #086D2B, #054d1c);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#cancel-edit:hover, #save-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .posts-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .post-form-container {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .community-content h1 {
+    font-size: 28px;
+  }
+  
+  .community-content h2 {
+    font-size: 24px;
+  }
+  
+  .post {
+    padding: 1.5rem;
+  }
+  
+  .post-form-container {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .community-content {
+    width: 95%;
+  }
+  
+  .community-content h1 {
+    font-size: 24px;
+  }
+  
+  .community-content h2 {
+    font-size: 20px;
+  }
+  
+  .post-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .reply-btn, .edit-btn, .delete-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .edit-modal-content {
+    padding: 1.5rem;
+  }
+}
