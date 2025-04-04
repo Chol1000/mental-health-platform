@@ -1,0 +1,192 @@
+/****************************
+  MAIN CONTENT STYLES
+  (Unique to aboutus.html)
+*****************************/
+
+.about-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  flex: 1;
+  text-align: center;
+}
+
+.about-content h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* INTRO SECTION */
+.intro-section {
+  margin-bottom: 3rem;
+}
+
+.intro-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0.5rem auto;
+  max-width: 800px;
+}
+
+/* MISSION SECTION */
+.mission-section {
+  margin: 3rem 0;
+}
+
+.mission-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.mission-section p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0.5rem auto;
+  max-width: 800px;
+}
+
+.mission-section ol {
+  list-style-position: inside;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+.mission-section ol li {
+  margin-bottom: 1rem;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+}
+
+/* OFFER SECTION */
+.offer-section {
+  margin: 3rem 0;
+}
+
+.offer-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.offer-section p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin: 0.5rem auto 1.5rem;
+  max-width: 800px;
+}
+
+.offer-section ol {
+  list-style-position: inside;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+.offer-section ol li {
+  margin-bottom: 1rem;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+}
+
+/* WHY SECTION */
+.why-section {
+  margin: 3rem 0;
+}
+
+.why-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.why-section ol {
+  list-style-position: inside;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 20px;
+  line-height: 1.6;
+  padding-left: 0;
+}
+
+.why-section ol li {
+  margin-bottom: 1rem;
+  text-align: left;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Strong text styling */
+.about-section strong {
+  color: #086D2B;
+}
+
+/****************************
+  MEDIA QUERIES
+  (Only for about-specific content)
+*****************************/
+@media (max-width: 768px) {
+  .about-content h1 {
+    font-size: 28px;
+  }
+  
+  .intro-section h2,
+  .mission-section h2,
+  .offer-section h2,
+  .why-section h2 {
+    font-size: 24px;
+  }
+  
+  .intro-section p,
+  .mission-section p,
+  .offer-section p,
+  .mission-section ol,
+  .offer-section ol,
+  .why-section ol {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content h1 {
+    font-size: 24px;
+  }
+  
+  .intro-section h2,
+  .mission-section h2,
+  .offer-section h2,
+  .why-section h2 {
+    font-size: 20px;
+  }
+  
+  .intro-section p,
+  .mission-section p,
+  .offer-section p,
+  .mission-section ol,
+  .offer-section ol,
+  .why-section ol {
+    font-size: 16px;
+  }
+  
+  .about-content {
+    width: 95%;
+  }
+}
